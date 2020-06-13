@@ -1,9 +1,12 @@
-Simple Text
+Node types:
+  Simple:
+    Text
+    Image
+  Multi/Animated:
+    Rolling images
+    Rolling Text
+  Statistics:
+    Bar Graph {Both directions}
+    Pie-chart
 
-Image Only
-Image with headline
-multi-img
-
-Dynamic from API
-
-Graphs
+All types in static or dynamic from api data
