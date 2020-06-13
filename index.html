@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
+
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/topbar.css">
@@ -7,50 +8,49 @@
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/module_tags.css">
+    <script src="js/controller.js" charset="utf-8" defer></script>
     <script src="js/clock.js" charset="utf-8" defer></script>
-    <script src="js/image_updater.js" charset="utf-8" defer></script>
+    <script src="js/node_updater.js" charset="utf-8" defer></script>
     <title></title>
   </head>
+
   <body>
     <div class="app">
       <div class="topbar">
-        <div class="headline">
+        <div class="headline" id="pageTitle">
           Makerspace Dashboard
         </div>
         <div class="clock" id='currentTime'></div>
       </div>
       <div class="box">
-      <div class="grid-container">
+        <div class="grid-container">
 
-        <div class="node" id ="node0">
-          <div class="center">
-            <h1 class="headline">Generic Text</h1>
-            <h3 class="simple-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+          <div class="node" id="node0">
           </div>
-        </div>
-        <div class="node" id ="node1">
-          <div class="center">
-            <h1 class="headline">Static</h1>
-            <img src="img/stock1.jpg" alt="">
+          <div class="node" id="node1">
+            <div class="center">
+              <h1 class="headline">Static</h1>
+              <img src="img/stock1.jpg" alt="">
+            </div>
           </div>
-        </div>
-        <div class="node" id ="node2">
-          <div class="center">
-            <h1 class="headline">Dynamic</h1>
-            <img src="img/stock1.jpg" alt="">
+          <div class="node" id="node2">
+            <div class="center">
+              <h1 class="headline">Dynamic</h1>
+              <img src="img/stock1.jpg" alt="">
+            </div>
           </div>
-        </div>
-        <div class="node" id ="node3">
+          <div class="node" id="node3">
 
-        </div>
-        <div class="node" id ="node4">
+          </div>
+          <div class="node" id="node4">
 
-        </div>
-        <div class="node" id ="node5">
+          </div>
+          <div class="node" id="node5">
 
+          </div>
         </div>
       </div>
     </div>
-    </div>
   </body>
+
 </html>

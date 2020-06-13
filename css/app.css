@@ -1,10 +1,19 @@
-.app{
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.app {
   display: flex;
   flex-flow: column;
   height: 100%;
 }
 
-.box{
+.box {
   flex: 1 1 auto;
   margin: 0;
   padding: 0;
