@@ -1,0 +1,23 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+  grid-gap: 10px;
+}
+
+.item{
+  background-color: #444;
+  color: white;
+}
+
+.item *{
+  margin: 5px;
+}
+
+.item .headline{
+  text-align: center;
+}
+
+.placeholder{
+  height: auto;
+}

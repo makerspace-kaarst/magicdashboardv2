@@ -1,0 +1,9 @@
+Simple Text
+
+Image Only
+Image with headline
+multi-img
+
+Dynamic from API
+
+Graphs

@@ -1,0 +1,11 @@
+.app{
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.box{
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 0;
+}
