@@ -1,20 +1,31 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
-DEBUG = False
-if DEBUG:
-    # Get the current IP for connection
-    import socket
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.connect(("8.8.8.8", 80))
-    ip_addr = s.getsockname()[0]
-    print(ip_addr)
-    s.close()
-    ip_addr = "192.168.0.72"  # DEBUG ONLY
+import html_generator
 
 page_title = "Magic Mirror"
 
 node_html = [[],[],[],[],[],[]]
 nodes_states = [0,0,0,0,0,0]
 
+# Debug/Connection data node generator and utils
+current_ip = ""
+debug_display_timer = 4
+def get_ip():
+    global current_ip
+    if current_ip:
+        return current_ip
+    return "192.168.0.72"  #DEBUG!!
+    # Get the current IP for connection
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(("8.8.8.8", 80))
+    current_ip = s.getsockname()[0]
+    s.close()
+    return current_ip
+
+def debug_node():
+    return f"""5
+            <h1 class="headline">Debug info:</h1>
+            <h1 style="color:#fff;text-align:center">IP: <span style="color:#c54848">{get_ip()}</span></h1>
+            <h1 style="color:#fff;text-align:center">Port: <span style="color:#c54848">1337</span></h1>"""
 
 def fetch_node_states():
     global node_html,nodes_states
@@ -33,23 +44,35 @@ def node_data(node_id):
         nodes_states[node_id] = state
         return bytes(node_html[node_id][state],'utf-8')
     else:
-        return bytes('reset','utf-8')
+        return bytes('1\nreset','utf-8')
 
 
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
+        global debug_display_timer
         self.path = self.path[1:]
         status = 200
         # Node status
         if self.path.startswith('nodes/'):
-            out = node_data(int(self.path[-1]))
+            if debug_display_timer > 0 and int(self.path[-1]) == 5:
+                out = bytes(debug_node(),'utf-8')
+                debug_display_timer -= 1
+            else:
+                out = node_data(int(self.path[-1]))
 
         elif self.path == 'reload':
+            html_generator.reload_all()
             fetch_node_states()
             out = bytes('OK','utf-8')
         elif self.path == 'topbar':
-            out = bytes(page_title+'\n'+(ip_addr if DEBUG else 'clock'),'utf-8')
+            out = bytes(page_title+'\nclock','utf-8')
+        elif self.path == 'debug':
+            out = bytes('OK','utf-8')
+            debug_display_timer += 1
+        elif self.path == 'debug/stop':
+            out = bytes('OK','utf-8')
+            debug_display_timer = 0
         else:
             if self.path == '':
                 self.path = 'index.html'
@@ -72,5 +95,6 @@ def server():
     httpd = HTTPServer(('localhost', 1337), SimpleHTTPRequestHandler)
     httpd.serve_forever()
 
+html_generator.reload_all()
 fetch_node_states()
 server()

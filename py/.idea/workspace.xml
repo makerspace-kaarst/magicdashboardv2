@@ -3,17 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7e212775-d069-4143-9d6c-f83fff440c85" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../css/module_tags.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/module_tags.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../js/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../js/node_updater.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/node_updater.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes/0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/nodes_html/0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/nodes_html/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/nodes_html/2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes/3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/nodes_html/3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes/4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/nodes_html/4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes/5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/nodes_html/5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes/6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/html_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodes/5.json" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodes_html/0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/nodes_html/0.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,13 +30,13 @@
           <entry key="ini" value="1" />
           <entry key="json" value="12" />
           <entry key="py" value="3" />
-          <entry key="txt" value="31" />
+          <entry key="txt" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="12" />
-          <entry key="PLAIN_TEXT" value="32" />
+          <entry key="PLAIN_TEXT" value="33" />
           <entry key="Python" value="3" />
         </counts>
       </usages-collector>
@@ -50,7 +44,7 @@
         <counts>
           <entry key="ini" value="34" />
           <entry key="json" value="619" />
-          <entry key="py" value="3580" />
+          <entry key="py" value="4432" />
           <entry key="txt" value="162" />
         </counts>
       </usages-collector>
@@ -58,20 +52,21 @@
         <counts>
           <entry key="JSON" value="619" />
           <entry key="PLAIN_TEXT" value="196" />
-          <entry key="Python" value="3580" />
+          <entry key="Python" value="4432" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1258">
-              <caret line="74" column="19" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
+            <state relative-caret-position="417">
+              <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
               <folding>
-                <marker date="1592130125905" expanded="true" signature="455:709" ph="..." />
+                <element signature="e#0#58#0" expanded="true" />
+                <marker date="1592159337370" expanded="true" signature="905:1159" ph="..." />
               </folding>
             </state>
           </provider>
@@ -80,21 +75,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            <state relative-caret-position="190">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
               <folding>
-                <marker date="1592134954140" expanded="true" signature="1036:1178" ph="..." />
-                <marker date="1592134954140" expanded="true" signature="1694:1696" ph="..." />
+                <element signature="e#0#20#0" expanded="true" />
+                <marker date="1592157271387" expanded="true" signature="35:37" ph="..." />
+                <marker date="1592157271387" expanded="true" signature="1072:1214" ph="..." />
+                <marker date="1592157271387" expanded="true" signature="1730:1732" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -120,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nodes/5.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+            <state>
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -172,15 +160,15 @@
         <option value="$PROJECT_DIR$/nodes/0.txt" />
         <option value="$PROJECT_DIR$/nodes/1.json" />
         <option value="$PROJECT_DIR$/nodes/0.json" />
-        <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/nodes/2.json" />
-        <option value="$PROJECT_DIR$/nodes/5.json" />
-        <option value="$PROJECT_DIR$/html_generator.py" />
         <option value="$PROJECT_DIR$/config.ini" />
+        <option value="$PROJECT_DIR$/html_generator.py" />
+        <option value="$PROJECT_DIR$/nodes/5.json" />
+        <option value="$PROJECT_DIR$/server.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -220,7 +208,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592138633789" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592159378151" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
@@ -236,7 +224,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.html_generator">
+  <component name="RunManager" selected="Python.server (1)">
     <configuration name="html_generator" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="py" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -307,8 +295,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.html_generator" />
         <item itemvalue="Python.server (1)" />
+        <item itemvalue="Python.html_generator" />
         <item itemvalue="Python.server" />
       </list>
     </recent_temporary>
@@ -327,10 +315,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -339,7 +327,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32952183" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32952183" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991684" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -366,9 +354,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/nodes_html/4.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodes_html/5.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/nodes/1.txt" />
@@ -419,38 +404,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nodes/5.json">
+    <entry file="file://$PROJECT_DIR$/config.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="74" column="19" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
-          <folding>
-            <marker date="1592130125905" expanded="true" signature="455:709" ph="..." />
-          </folding>
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state relative-caret-position="190">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
-            <marker date="1592134954140" expanded="true" signature="1036:1178" ph="..." />
-            <marker date="1592134954140" expanded="true" signature="1694:1696" ph="..." />
+            <element signature="e#0#20#0" expanded="true" />
+            <marker date="1592157271387" expanded="true" signature="35:37" ph="..." />
+            <marker date="1592157271387" expanded="true" signature="1072:1214" ph="..." />
+            <marker date="1592157271387" expanded="true" signature="1730:1732" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.ini">
+    <entry file="file://$PROJECT_DIR$/nodes/5.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodes_html/5.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+            <marker date="1592159337370" expanded="true" signature="905:1159" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

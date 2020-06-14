@@ -1,14 +1,16 @@
 import json,colorsys
+import socket
+
 
 templates = {
-    "text":"""<div class="center"><h1 class="headline">[headline]</h1><h3 class="simple-text">[content]</h3></div>""",
+    "text":"""<div class="center" style="justify-content:flex-start"><h1 class="headline">[headline]</h1><h3 class="simple-text">[content]</h3></div>""",
     "image":"""<div class="center"><h1 class="headline">[headline]</h1><img src="[file]" alt=""></div>""",
     "bargraph-base":"""<div style="display:flex;height:100%;flex-direction:column"><h1 class="headline">[headline]</h1><div class="box" style="display:flex;align-items:flex-end;justify-content:center">[content]</div></div>""",
     "bargraph-element":"""<div style="background-color:[color];width:30px;height:[value]%;margin-left:5px;margin-right:5px"></div>""",
     "stacked-bargraph-base":"""<div style="display:flex;height:100%;flex-direction:column"><h1 class="headline">[headline]</h1><div class="box" style="display:flex;align-items:flex-end;justify-content:center;align-items:center">[content]</div></div>""",
     "stacked-bargraph-element":"""<div style="background-color:[color];height:50px;flex-grow: [value]"></div>"""
 }
-def debug_node
+
 def colorgen(cid,divisions):
     return [int(x*255) for x in colorsys.hsv_to_rgb((1/divisions)*cid,0.8,1)]
 
@@ -51,11 +53,11 @@ def node_string(data):
         out.append(node_maker(state))
     return '\nEND_OF_HTML_NODE_SECTION\n'.join(out)
 
-# Load files
-raw = []
-for i in range(6):
-    with open(f'nodes/{i}.json','r') as f:
-        out = node_string(json.loads(f.read()))
+def reload_all():
+    raw = []
+    for i in range(6):
+        with open(f'nodes/{i}.json','r') as f:
+            out = node_string(json.loads(f.read()))
 
-    with open(f'nodes_html/{i}.txt','w') as f2:
-        f2.write(out)
+        with open(f'nodes_html/{i}.txt','w') as f2:
+            f2.write(out)
