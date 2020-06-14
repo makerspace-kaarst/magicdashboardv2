@@ -1,0 +1,11 @@
+[{
+  "node_type":"bargraph",
+  "headline":"Normal bar graph",
+  "data":[5,10,20,30],
+  "display_scale":"auto"
+},{
+  "node_type":"stacked-bargraph",
+  "headline":"Stacked bar graph",
+  "data":[5,10,20,30],
+  "display_scale":"auto"
+}]

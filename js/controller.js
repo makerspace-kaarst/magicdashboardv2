@@ -19,8 +19,7 @@ function APIRequest(url, callback, callback_data) {
 APIRequest('/topbar', update_topbar)
 setInterval(function() {
   APIRequest('/topbar', update_topbar)
-  APIRequest('/reload', sinkhole)
-}, 20000);
+}, 10000);
 
 // Callback sinhhole, a function that has no effect
 function sinkhole() {}
