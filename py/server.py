@@ -1,5 +1,7 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
 import html_generator
+import file_sync
+import requests
 
 page_title = "Magic Mirror"
 
@@ -61,18 +63,23 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             else:
                 out = node_data(int(self.path[-1]))
 
-        elif self.path == 'reload':
-            html_generator.reload_all()
-            fetch_node_states()
-            out = bytes('OK','utf-8')
         elif self.path == 'topbar':
             out = bytes(page_title+'\nclock','utf-8')
+
+        elif self.path.startswith('sync/'):
+            out = bytes('OK','utf-8')
+            try:
+                file_sync.sync(self.path.split('/')[-1])
+                html_generator.reload_all()
+                fetch_node_states()
+            except requests.exceptions.InvalidURL:
+                out =  bytes('Invalid hostname, you have to use a valid IP and PORT: /sync/127.0.0.1:9001 [Invalid Hostname]','utf-8')
+            except requests.exceptions.ConnectionError:
+                out =  bytes('Invalid hostname, you have to use a valid IP and PORT: /sync/127.0.0.1:9001 [Invalid PORT / Maximum retries]','utf-8')
         elif self.path == 'debug':
             out = bytes('OK','utf-8')
             debug_display_timer += 1
-        elif self.path == 'debug/stop':
-            out = bytes('OK','utf-8')
-            debug_display_timer = 0
+
         else:
             if self.path == '':
                 self.path = 'index.html'

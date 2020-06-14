@@ -56,7 +56,7 @@ def node_string(data):
 def reload_all():
     raw = []
     for i in range(6):
-        with open(f'nodes/{i}.json','r') as f:
+        with open(f'../nodes/{i}.json','r') as f:
             out = node_string(json.loads(f.read()))
 
         with open(f'nodes_html/{i}.txt','w') as f2:
