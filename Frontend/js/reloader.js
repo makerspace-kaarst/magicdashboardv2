@@ -38,7 +38,6 @@ function init() {
 // Acc
 function updateGrid(settings) {
   // Parse and seperate returned data
-  console.log(settings);
   settings = JSON.parse(settings);
   let rows = settings[0];
   let columns = settings[1];
