@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- CSS stylesheets make the page look good -->
+    <link rel="stylesheet" href="css/containers.css">
+    <link rel="stylesheet" href="css/multiuse.css">
+    <link rel="stylesheet" href="css/topbar.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <!-- Javascript make the page do stuff -->
+    <script src="js/clock.js" charset="utf-8" defer></script>
+    <script src="js/api.js" charset="utf-8" defer></script>
+    <script src="js/utils.js" charset="utf-8"></script>
+    <script src="js/reloader.js" charset="utf-8" defer></script>
+    <script type="text/javascript" defer>
+      var AUTH_KEY = uuidv4(); // used like a 'one time password' to authenticate a web instance
+
+    </script>
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="topbar">
+        <div class="headline" id="pageTitle">
+          NodeBoard v0.25
+        </div>
+        <div class="clock" id='currentTime'></div>
+      </div>
+      <div class="box">
+        <div class="grid-container" id="user-nodes">
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,2 +1,0 @@
-10
-<div class="center"><h1 class="headline">It's that guy again:</h1><img src="/img/stock2.jpg" alt=""></div>

@@ -1,5 +1,0 @@
-2
-<div class="center" style="justify-content:flex-start"><h1 class="headline">Generic text</h1><h3 class="simple-text">It's just plain boring text, nothing interesting here...</h3></div>
-END_OF_HTML_NODE_SECTION
-2
-<div class="center" style="justify-content:flex-start"><h1 class="headline">It's alive!</h1><h3 class="simple-text">You can change everything about this node in py/nodes/0.json</h3></div>
