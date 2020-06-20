@@ -125,7 +125,6 @@ def unsave_console():
 
 # --- IF MAIN: Shows all features of the API in order, animated and commented
 if __name__ == '__main__':
-    unsave_console()
     import time
     print("changing the title")
     update_title('NodeBoard API features')

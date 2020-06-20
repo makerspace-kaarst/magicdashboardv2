@@ -8,7 +8,7 @@ import cache
 def grid_settings(*args):
     with open("../Frontend/templates/node.html",'rb') as f:
         node_template = f.read().decode().replace('\n','').replace('\r','').replace('\"','\'').strip()
-    return f"[{cache.read(['grid','rows'])},{cache.read(['grid','columns'])},{str(len(cache.read(['update_delay'])))},\"{node_template}\"]"
+    return "["+cache.read(['grid','rows'])+","+cache.read(['grid','columns'])+","+str(len(cache.read(['update_delay'])))+",\""+node_template+"\"]"
 
 ### --- UNSAVE GETS --- [The ones you SHOULD NOT have]
 
