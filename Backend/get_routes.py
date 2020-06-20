@@ -1,14 +1,17 @@
 import json
 import cache
+import traceback
 
 ### --- SAVE GETS --- [The only ones you SHOULD have]
 
 # returns amount of nodes and grid settings
 # Rows|Columns|Node amount
 def grid_settings(*args):
-    with open("../Frontend/templates/node.html",'rb') as f:
-        node_template = f.read().decode().replace('\n','').replace('\r','').replace('\"','\'').strip()
-    return "["+cache.read(['grid','rows'])+","+cache.read(['grid','columns'])+","+str(len(cache.read(['update_delay'])))+",\""+node_template+"\"]"
+    try:
+        node_template = """<div class="node"><div class="node-content"></div><div class="node-content hidden"></div></div>"""
+        return "["+str(cache.read(['grid','rows']))+","+str(cache.read(['grid','columns']))+","+str(len(cache.read(['update_delay'])))+",\""+node_template+"\"]"
+    except Exception as e:
+        print(traceback.format_exc())
 
 ### --- UNSAVE GETS --- [The ones you SHOULD NOT have]
 
@@ -56,3 +59,5 @@ def windowtitle(*args):
 
 def test(*args):
     return "You haz found the super secret mega epic GET endpoint... have a flag{wait_this_still_is_not_a_ctf_now_i_am_sad}\n\n"+str(args[0])
+
+print(grid_settings())

@@ -104,7 +104,7 @@ def test(*args):
 
 
 def set_uuid(*args):
-    cache.write(['auth_uuid'],args['auth'])
+    cache.write(['auth_uuid'],args[0]['auth'])
 
 
 # returns a dump of the Database

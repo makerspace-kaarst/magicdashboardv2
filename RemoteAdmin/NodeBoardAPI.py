@@ -1,7 +1,7 @@
 import requests
 import urllib
 
-IP = 'http://192.168.178.255'
+IP = 'http://192.168.178.107'
 PORT = 1337
 PASSWORD='ChangeMe'
 
@@ -119,12 +119,14 @@ def unsave_console():
     while True:
         try:
             cmd = input('>>> ')
+            if cmd == 'exit':
+                exit()
             try:
                 print(eval(cmd,globals()))
             except SyntaxError:
                 exec(cmd,globals())
-        except:
-            print("invalid cmd!")
+        except Exception as e:
+            print(e)
 
 # --- IF MAIN: Shows all features of the API in order, animated and commented
 if __name__ == '__main__':
