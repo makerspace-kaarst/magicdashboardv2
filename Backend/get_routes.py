@@ -8,7 +8,7 @@ import traceback
 # Rows|Columns|Node amount
 def grid_settings(*args):
     try:
-        node_template = """<div class="node"><div class="node-content"></div><div class="node-content hidden"></div></div>"""
+        node_template = """<div class="node"><div class="node-content"></div><div class="node-content hidden"></div></div>""".replace('"','\'')
         return "["+str(cache.read(['grid','rows']))+","+str(cache.read(['grid','columns']))+","+str(len(cache.read(['update_delay'])))+",\""+node_template+"\"]"
     except Exception as e:
         print(traceback.format_exc())
@@ -59,5 +59,3 @@ def windowtitle(*args):
 
 def test(*args):
     return "You haz found the super secret mega epic GET endpoint... have a flag{wait_this_still_is_not_a_ctf_now_i_am_sad}\n\n"+str(args[0])
-
-print(grid_settings())
