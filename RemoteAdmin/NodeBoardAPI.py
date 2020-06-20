@@ -1,7 +1,7 @@
 import requests
 import urllib
 
-IP = 'http://127.0.0.1'
+IP = 'http://192.168.178.255'
 PORT = 1337
 PASSWORD='ChangeMe'
 
