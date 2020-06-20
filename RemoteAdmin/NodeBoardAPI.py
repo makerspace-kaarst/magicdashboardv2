@@ -117,15 +117,19 @@ def master_key_password_reset(master_key,password):
 def unsave_console():
     print('API functions can be used without module name, you are authenticated with the data enered by whatever dropped you here.\n\n')
     while True:
-        cmd = input('>>> ')
         try:
-            print(eval(cmd,globals()))
-        except SyntaxError:
-            exec(cmd,globals())
+            cmd = input('>>> ')
+            try:
+                print(eval(cmd,globals()))
+            except SyntaxError:
+                exec(cmd,globals())
+        except:
+            print("invalid cmd!")
 
 # --- IF MAIN: Shows all features of the API in order, animated and commented
 if __name__ == '__main__':
     import time
+    unsave_console()
     print("changing the title")
     update_title('NodeBoard API features')
     time.sleep(2)
