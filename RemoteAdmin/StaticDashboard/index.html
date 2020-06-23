@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>NodeMagic</title>
+
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/containers.css">
+    <link rel="stylesheet" href="css/presets.css">
+
+
+    <script src="js/api.js" charset="utf-8"></script>
+    <script src="js/context.js" charset="utf-8"></script>
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="topbar grid">
+        <h1 class="mono editable leftalign" contenteditable="true">Title</h1>
+      </div>
+      <div class="sidebar">
+        <div class="" id="sidebar-content">
+
+        </div>
+        <div class="node flexend flex darkgrey">
+          <h1 class="mono smallcaps">Add a node</h1>
+          <button type="button" name="button" class="plusbutton" onclick="add_node()">+</button>
+        </div>
+
+      </div>
+      <div class="content">
+        <div class="hidden-flex force-fill hidden" id='node-hub'>
+          <div class="topbar" style='background-color:inherit;'>
+            <h1 class='mono leftalign' id='node-hub-node-id'>node_id: 0</h1>
+            <h1 class='mono leftalign' id='node-hub-slides'>slides: 0</h1>
+            <h1 class="mono nodeval link" style="background-color: #b56262;" id='delete-node'>Delete Node</h1>
+          </div>
+          <div class="grid grid4x" id="node-hub-grid">
+          </div>
+        </div>
+
+        <div class="hidden-flex force-fill hidden" id="slide">
+          <div class="node darkgrey" id="slide-type">
+            <div class="flex-row">
+              <h1>Slide Type:</h1>
+              <div class="fake-radio">Text</div>
+              <div class="fake-radio">Image</div>
+              <div class="fake-radio">Graph</div>
+              <div class="fake-radio">Raw</div>
+            </div>
+          </div>
+          <div class="node darkgrey" id="slide-text">
+            <div class="force-fill">
+              <div class="flex-row">
+                <h1 style="padding-right:1rem;" class="headline">Node headline: </h1>
+                <h1 class="value leftalign" contenteditable="true" spellcheck="false">Headline</h1>
+              </div>
+              <h1 style="padding-right:1rem;">Node content: </h1>
+              <h1 class="value leftalign text" contenteditable="true" spellcheck="false">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud
+                exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+
+</html>

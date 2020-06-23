@@ -54,6 +54,7 @@ def delete_node(*args):
 
 # Add or remove a state from a node
 def manage_node(*args):
+    print("ARGS:",args[0])
     node_id = int(args[0]['node_id'])
     action = args[0]['action']
     db = cache.get_raw()
@@ -111,7 +112,7 @@ def set_uuid(*args):
 def db(*args):
     c = cache.get_raw().copy()
     c['config'] = ['No passwords for you, you don\'t need them anyways, right?']
-    return str(c)
+    return json.dumps(c)
 
 
 # Change the Board title
