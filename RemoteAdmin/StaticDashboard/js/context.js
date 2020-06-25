@@ -138,8 +138,6 @@ function delete_node(node_id) {
 }
 
 function save_slide_data() {
-  alert(document.getElementById('node-content-raw')
-    .innerText);
   APIRequest('/manage_node', {
     'node_id': CONTEXT_META[0],
     'action': 'update',
