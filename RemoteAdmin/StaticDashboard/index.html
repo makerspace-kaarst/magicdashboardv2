@@ -17,7 +17,7 @@
   <body>
     <div class="app">
       <div class="topbar grid">
-        <h1 class="mono editable leftalign" contenteditable="true">Title</h1>
+        <h1 class="mono editable leftalign" contenteditable="true" onblur="update_title(this.innerText)" id="page-title" style='white-space: nowrap;'>Title</h1>
       </div>
       <div class="sidebar">
         <div class="" id="sidebar-content">
@@ -42,26 +42,14 @@
 
         <div class="hidden-flex force-fill hidden" id="slide">
           <div class="node darkgrey" id="slide-type">
-            <div class="flex-row">
-              <h1>Slide Type:</h1>
-              <div class="fake-radio">Text</div>
-              <div class="fake-radio">Image</div>
-              <div class="fake-radio">Graph</div>
-              <div class="fake-radio">Raw</div>
-            </div>
           </div>
           <div class="node darkgrey" id="slide-text">
             <div class="force-fill">
-              <div class="flex-row">
-                <h1 style="padding-right:1rem;" class="headline">Node headline: </h1>
-                <h1 class="value leftalign" contenteditable="true" spellcheck="false">Headline</h1>
+              <div class="flex">
+                <h1 style="padding-right:1rem;">Node content: <span style='color:#8ecc93'><b>Raw HTML dump:</b></span></h1>
+                <button type="button" name="button" class="plusbutton" onclick="save_slide_data()">Save</button>
               </div>
-              <h1 style="padding-right:1rem;">Node content: </h1>
-              <h1 class="value leftalign text" contenteditable="true" spellcheck="false">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud
-                exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</h1>
+              <h1 class="leftalign mono border1" contenteditable="true" spellcheck="false" id='node-content-raw'></h1>
             </div>
           </div>
         </div>

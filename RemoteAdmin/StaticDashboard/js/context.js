@@ -5,6 +5,7 @@ String.prototype.replaceAll = function(search, replacement) {
 };
 
 var CONTEXT = {}
+var CONTEXT_META = [0, 0]
 
 var SIDEBAR_NODE = `<div class="node link" onclick="hub_builder([node_id])">
   <h1 class="mono nodeval">node_id: <span class="value">[node_id]</span></h1>
@@ -31,6 +32,10 @@ function updateContext() {
     CONTEXT = source;
     document.getElementById('sidebar-content')
       .innerHTML = update_sidebar(source['node_html'])
+  });
+  APIRequest('/windowtitle', {}, function(title) {
+    document.getElementById('page-title')
+      .innerText = title;
   })
 }
 
@@ -91,12 +96,14 @@ function add_slide(node_id) {
 }
 
 function edit_slide(node_id, slide_id) {
+  CONTEXT_META = [node_id, slide_id]
   document.getElementById('slide')
     .classList.remove('hidden');
   document.getElementById('node-hub')
     .classList.add("hidden")
   let current_code = CONTEXT['node_html'][node_id][slide_id];
-  alert('EDIT: ' + node_id + ' | ' + slide_id + ' | ' + current_code);
+  document.getElementById('node-content-raw')
+    .innerText = current_code;
 }
 
 function delete_slide(node_id, slide_id) {
@@ -129,3 +136,24 @@ function delete_node(node_id) {
       .classList.add("hidden")
   }
 }
+
+function save_slide_data() {
+  alert(document.getElementById('node-content-raw')
+    .innerText);
+  APIRequest('/manage_node', {
+    'node_id': CONTEXT_META[0],
+    'action': 'update',
+    'index': CONTEXT_META[1],
+    'html': document.getElementById('node-content-raw')
+      .innerText
+  }, updateContext);
+}
+
+function update_title(text) {
+  APIRequest('/update_title', {
+    'title': text
+  }, sinkhole);
+}
+
+// Bootup update
+updateContext();

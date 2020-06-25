@@ -54,7 +54,6 @@ def delete_node(*args):
 
 # Add or remove a state from a node
 def manage_node(*args):
-    print("ARGS:",args[0])
     node_id = int(args[0]['node_id'])
     action = args[0]['action']
     db = cache.get_raw()
@@ -126,5 +125,8 @@ def update_password(*args):
     temp = cache.read(['config'])
     temp['password'] = args[0]['password']
     cache.write(['config'],temp)
-    print(cache.read(['config']))
     return 'OK'
+
+
+def windowtitle(*args):
+    return cache.read(['title'])

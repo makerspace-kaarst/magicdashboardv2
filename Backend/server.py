@@ -107,7 +107,6 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             out = traceback.format_exc()  # return the traceback
         self.send_response(status)
         self.end_headers()
-        print("POST:",out)
         self.wfile.write(bytes(str(out),'utf-8'))
 
     def log_message(self, format, *args):

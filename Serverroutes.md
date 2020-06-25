@@ -28,6 +28,7 @@ These routes act as API endpoints, only returning OK or a traceback on error.
 * /foce_update needs no arguments and sets the 'force update' flag so that all nodes are updated,
 ignoring the timer system for the next tick. the flag gets reset automatically.
 * /db same as the GET version, for the API
+* /windowtitle same as the GET version, returns the windowtitle
 * /set_uuid takes a `auth` parameter with eather a UUID of the target or a blank string,
 	blank means anyone can connect
 * /update_title changes the current page title to `title`

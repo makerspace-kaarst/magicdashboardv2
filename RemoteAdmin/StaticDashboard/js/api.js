@@ -53,3 +53,7 @@ function rawAPIRequestGET(url, data, callback, callback_data) {
   request.setRequestHeader("Accept", "text/plain");
   request.send(JSON.stringify(data));
 }
+
+function sinkhole() {
+
+}

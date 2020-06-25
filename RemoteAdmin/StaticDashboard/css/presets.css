@@ -91,3 +91,8 @@ h1 {
 .link {
   cursor: pointer;
 }
+
+.border1 {
+  border-style: dashed;
+  border-color: #fff;
+}
