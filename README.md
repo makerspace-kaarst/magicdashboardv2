@@ -8,6 +8,8 @@
 - Backend
 - RemoteAdmin
 
+[![Docs](http://img.shields.io/:docs-PythonAPI-blue.svg?style=flat-square)](https://github.com/makerspace-kaarst/magicdashboard/blob/master/PythonAPI.md)
+[![Docs](http://img.shields.io/:docs-Serverroutes-blue.svg?style=flat-square)](https://github.com/makerspace-kaarst/magicdashboard/blob/master/Serverroutes.md)
 
 ## Contributing
 
@@ -27,7 +29,7 @@
 
 ---
 
-## Constributors
+## Contributors
 
 | **Stephan aka. Stevetec-exe** | **Jan-Hendrik aka. JH220** |
 | :---: |:---:|
