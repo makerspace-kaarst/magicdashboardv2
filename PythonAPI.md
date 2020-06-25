@@ -1,7 +1,7 @@
 # Python API
 All features of the NodeBoard can be ccontrolled over http, or by the HTTP API that abstracts these calls away.
 
-# Funktions
+# Functions
 |name|arguments|description
 |---|---|---
 upload_file|`filename`|uploads a file from the current working directory to the /uploads directory

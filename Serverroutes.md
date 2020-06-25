@@ -2,7 +2,7 @@
 This document list all supported routes exposed by the NodeBoard Webserver
 
 
-# GET endpoints 
+# GET endpoints
 ## Read-only
 Routes that can be read without changing states or data
 
@@ -28,7 +28,7 @@ These routes act as API endpoints, only returning OK or a traceback on error.
 * /foce_update needs no arguments and sets the 'force update' flag so that all nodes are updated,
 ignoring the timer system for the next tick. the flag gets reset automatically.
 * /db same as the GET version, for the API
-* /set_uuid takes a `auth` parameter with eather a UUID of the target or a blank string, 
+* /set_uuid takes a `auth` parameter with eather a UUID of the target or a blank string,
 	blank means anyone can connect
 * /update_title changes the current page title to `title`
 * /update_password uses the `password` argument to updates the API password to the new one.
@@ -37,14 +37,14 @@ ignoring the timer system for the next tick. the flag gets reset automatically.
 	/manage_node takes `node_id`,`action` and command specific parameters. This endpoint is used to
 	change any node value, add or remove states and more. Commands are aliased to some common
 	replacements, to ensure functionality only use the official names.
-	
+
 	|action|[unique] parameters|description|
 	|---|---|---|
 	|add|`index` `html`|Inserts a new state into a node.
 	|remove|`index`| removes a referenced state [counter gets reset to prevent overflow]
 	|delay|`delay`|change the amount of seconds a state is shown, uses abs(delay)
 	|update|`index` `html`| replaces the referenced html with the provided new data.
-	
+
 # Security
 >**Please note that this service runns on unencypted http, the password is visible in plaintext.
 This mode is supposed to stop 'the general public' and incompetent script kiddies from
@@ -57,4 +57,4 @@ to connect
 ### POST
 
 If `secure-api` is set in the config any POST reuqest without the X-API-Auth header set to the
-paswords will we dropped
+pasword will we dropped
