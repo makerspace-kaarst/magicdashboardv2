@@ -27,7 +27,7 @@
 
 ---
 
-## Constributors
+## Contributors
 
 | **Stephan aka. Stevetec-exe** | **Jan-Hendrik aka. JH220** |
 | :---: |:---:|
