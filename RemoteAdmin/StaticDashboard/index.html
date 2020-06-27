@@ -8,14 +8,32 @@
     <link rel="stylesheet" href="css/buttons.css">
     <link rel="stylesheet" href="css/containers.css">
     <link rel="stylesheet" href="css/presets.css">
+    <link rel="stylesheet" href="css/login.css">
 
+    <script charset="utf-8">
+      SERVER = '';
+      PORT = -1;
+      PASSWORD = '';
 
+    </script>
     <script src="js/api.js" charset="utf-8"></script>
     <script src="js/context.js" charset="utf-8"></script>
+    <script src="js/login.js" charset="utf-8"></script>
   </head>
 
   <body>
-    <div class="app">
+    <div class="force-fill flex loginbg" id="login-main">
+      <div class="login hidden-flex">
+        <h1 class="center mono" style="color:#fff;font-size:3rem;">NodeBoard Login</h1>
+        <div class="login-inputs">
+          <input type="text" name="" value="" placeholder="Board IP" id="login-ip">
+          <input type="number" name="" value="" placeholder="Server Port" id="login-port">
+          <input type="password" name="" value="" placeholder="API Key" id="login-key">
+          <button type="button" name="button" class="plusbutton" style="padding:1rem" onclick="login()">Login</button>
+        </div>
+      </div>
+    </div>
+    <div class="app" style="display:none" id="app-main">
       <div class="topbar grid">
         <h1 class="mono editable leftalign" contenteditable="true" onblur="update_title(this.innerText)" id="page-title" style='white-space: nowrap;'>Title</h1>
       </div>

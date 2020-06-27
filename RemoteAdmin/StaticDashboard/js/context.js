@@ -170,6 +170,3 @@ function save_slide_time() {
       .value)
   }, updateContext);
 }
-
-// Bootup update
-updateContext();
