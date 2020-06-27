@@ -135,6 +135,10 @@ cache.hard_set(
      }
 )
 
+import os
+if os.getcwd() == "/home/pi":
+    os.chdir("/home/pi/Schreibtisch/magicdashboard/Backend/")
+
 # Load data from config.json
 with open('config.json','r') as f:
     cache.write(['config'],json.loads(f.read()))
