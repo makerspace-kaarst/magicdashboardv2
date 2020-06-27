@@ -105,6 +105,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         except Exception as e:  # the loaded function fails:
             status = 500  # set the correct status code
             out = traceback.format_exc()  # return the traceback
+            print(out)
         self.send_response(status)
         self.end_headers()
         self.wfile.write(bytes(str(out),'utf-8'))

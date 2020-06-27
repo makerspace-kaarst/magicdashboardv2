@@ -7,6 +7,7 @@ All features of the NodeBoard can be ccontrolled over http, or by the HTTP API t
 upload_file|`filename`|uploads a file from the current working directory to the /uploads directory
 delete_file|`filename`|deletes a file from /uploads
 add_node|`node_id`| adds a new node anywhere into the stack
+get_delay|`node_id`| returns node update delay in seconds
 delete_node|`node_id`|delete any node
 update_grid|`rows` `columns`|change the base grid size
 add_html|`node_id` `html`|append a new state to any node use `index` to insert the state at any location, defaults to the end of the cycle

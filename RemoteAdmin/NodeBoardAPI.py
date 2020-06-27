@@ -24,6 +24,13 @@ def add_node(node_id):
     }).text
 
 
+# Add a node
+def get_delay(node_id):
+    return requests.post(IP+':'+str(PORT)+'/get_delay', headers={'X-API-Auth': PASSWORD}, data={
+        'node_id': node_id
+    }).text
+
+
 # Delete a node
 def delete_node(node_id):
     return requests.post(IP+':'+str(PORT)+'/delete_node', headers={'X-API-Auth': PASSWORD}, data={

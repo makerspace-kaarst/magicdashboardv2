@@ -49,6 +49,14 @@ function update_sidebar(node_html) {
 }
 
 function hub_builder(node_id) {
+
+  APIRequest('/get_delay', {
+    'node_id': node_id
+  }, function(delay) {
+    document.getElementById('slide-timer')
+      .value = parseInt(delay);
+  });
+
   document.getElementById('delete-node')
     .onclick = function() {
       let tmp = document.getElementById('node-hub-node-id')
@@ -151,6 +159,16 @@ function update_title(text) {
   APIRequest('/update_title', {
     'title': text
   }, sinkhole);
+}
+
+function save_slide_time() {
+  APIRequest('/manage_node', {
+    'node_id': CONTEXT_META[0],
+    'action': 'delay',
+    'index': CONTEXT_META[1],
+    'delay': parseInt(document.getElementById('slide-timer')
+      .value)
+  }, updateContext);
 }
 
 // Bootup update

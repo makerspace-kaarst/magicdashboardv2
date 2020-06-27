@@ -130,3 +130,7 @@ def update_password(*args):
 
 def windowtitle(*args):
     return cache.read(['title'])
+
+
+def get_delay(*args):
+    return cache.get_raw()['update_delay'][int(args[0]['node_id'])]

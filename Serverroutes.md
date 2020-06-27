@@ -33,6 +33,7 @@ ignoring the timer system for the next tick. the flag gets reset automatically.
 	blank means anyone can connect
 * /update_title changes the current page title to `title`
 * /update_password uses the `password` argument to updates the API password to the new one.
+* /get_delay returns update delay of `node` in seconds
 
 	### Editing node data
 	/manage_node takes `node_id`,`action` and command specific parameters. This endpoint is used to
