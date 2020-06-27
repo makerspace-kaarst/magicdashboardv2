@@ -15,6 +15,7 @@ function getNodes() {
 
 // Main function called every second, updates everything
 function updateNodes(newContentAvailable) {
+  console.log('contentAvailable:   ' + newContentAvailable);
   newContentAvailable = JSON.parse(newContentAvailable); // the request retrurns stringified json
   let nodes = getNodes(); // get all existing nodes
   for (let nodeId = 0; nodeId < nodes.length; nodeId++) { // Loop over all nodes
@@ -37,6 +38,7 @@ function init() {
 
 // Acc
 function updateGrid(settings) {
+  console.log('grid:   ' + settings);
   // Parse and seperate returned data
   settings = JSON.parse(settings);
   let rows = settings[0];
