@@ -1,5 +1,5 @@
 SERVER = 'http://192.168.178.107'
-//SERVER = 'http://127.0.0.1'
+SERVER = 'http://127.0.0.1'
 PORT = 1337
 PASSWORD = "ChangeMe"
 // This function performes an HTTP request to the given URL and calls a given
