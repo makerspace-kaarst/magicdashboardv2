@@ -7,7 +7,7 @@ templates = [
 
   `<div class="flex-provider">
     <h1>[template-headline]</h1>
-    <img src="[template-content]" alt="" class="smart-image">
+    <img src="uploads/[template-content]" alt="" class="smart-image">
   </div>`
 ]
 
@@ -42,7 +42,7 @@ function generateHTML(type_id) {
   return final;
 }
 
-function openTeplatingEditor() {
+function openTemplatingEditor() {
   document.getElementById('templating-main')
     .classList.remove('hidden');
 }
