@@ -87,6 +87,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         # Check password and auth Header
         if not (
                 (not cache.read(['config'])['secure-api'])
+                or self.path == '/http_upload'
                 or (self.headers['X-API-Auth'] in
                     [cache.read(['config'])['password'],cache.read(['config'])['master_key']]
                 if 'X-API-Auth' in self.headers.keys() else False)):
