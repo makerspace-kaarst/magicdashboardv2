@@ -135,7 +135,7 @@ def windowtitle(*args):
 def get_delay(*args):
     return cache.get_raw()['update_delay'][int(args[0]['node_id'])]
 
-def test_upload(*args):
+def http_upload(*args):
     try:
         if args[0] == {}:
             crash()
