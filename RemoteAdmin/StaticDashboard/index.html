@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/presets.css">
     <link rel="stylesheet" href="css/login.css">
 
+    <link rel="stylesheet" href="css/htmlgen.css">
+
     <script charset="utf-8">
       SERVER = '';
       PORT = -1;
@@ -19,10 +21,11 @@
     <script src="js/api.js" charset="utf-8"></script>
     <script src="js/context.js" charset="utf-8"></script>
     <script src="js/login.js" charset="utf-8"></script>
+    <script src="js/htmlgen.js" charset="utf-8"></script>
   </head>
 
   <body>
-    <div class="force-fill flex loginbg" id="login-main">
+    <div class="force-fill flex loginbg absolute" id="login-main">
       <div class="login hidden-flex">
         <h1 class="center mono" style="color:#fff;font-size:3rem;">NodeBoard Login</h1>
         <div class="login-inputs">
@@ -33,7 +36,7 @@
         </div>
       </div>
     </div>
-    <div class="app" style="display:none" id="app-main">
+    <div class="app absolute" style="display:none" id="app-main">
       <div class="topbar grid">
         <h1 class="mono editable leftalign" contenteditable="true" onblur="update_title(this.innerText)" id="page-title" style='white-space: nowrap;'>Title</h1>
       </div>
@@ -41,7 +44,7 @@
         <div class="" id="sidebar-content">
 
         </div>
-        <div class="node flexend flex darkgrey">
+        <div class="node flexend flex darkgrey" style="margin:0;margin-top:auto">
           <h1 class="mono smallcaps">Add a node</h1>
           <button type="button" name="button" class="plusbutton" onclick="add_node()">+</button>
         </div>
@@ -68,11 +71,38 @@
                 <h1 style="padding-right:1rem;">Node content: <span style='color:#8ecc93'><b>Raw HTML dump:</b></span></h1>
                 <button type="button" name="button" class="plusbutton" onclick="save_slide_data()">Save</button>
               </div>
+              <div class="flex">
+                <button type="button" name="button" class="plusbutton" onclick="openTeplatingEditor()">Open node templating editor</button>
+              </div>
               <h1 class="leftalign mono border1" contenteditable="true" spellcheck="false" id='node-content-raw'></h1>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="absolute force-fill hidden" style='background-color:rgba(221, 221, 221, 0.44)' id='templating-main'>
+      <div class="htmlgen absolute hidden-flex">
+        <div class="flex" style="justify-content:flex-start;background-color:#555" id='templating-presets'>
+          <div class="htmltype link" onclick="selectPresetType(0)">Text</div>
+          <div class="htmltype htmltype-selected link" onclick="selectPresetType(1)">Image</div>
+          <div class="htmltype plusbutton link flexend" onclick="htmlEditorSave()">Save</div>
+        </div>
+
+        <div class="flex-fill" id='html-editor-values'>
+          <div class="hidden">
+            <h1 class="mono editable2 center rem5 template-headline" contenteditable="true">Headline</h1>
+            <h3 class="mono editable2 center rem3 spacing-top template-content" contenteditable="true">Content</h3>
+          </div>
+          <div class="">
+            <h1 class="mono editable2 center rem5 template-headline" contenteditable="true">Headline</h1>
+            <div class="flex-row">
+              <h3 class="mono descriptiontext center rem3 spacing-top">Image name:</h3>
+              <h3 class="mono editable2 center rem3 spacing-top template-content" contenteditable="true">Content</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 
 </html>

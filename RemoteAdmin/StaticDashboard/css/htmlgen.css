@@ -1,0 +1,46 @@
+.htmlgen {
+  margin-left: 5%;
+  margin-top: 2.5%;
+  height: 90%;
+  width: 90%;
+  background-color: #333;
+}
+
+.htmltype {
+  padding: 1rem;
+  font-size: 3rem;
+  color: #fff;
+  background-color: #444;
+}
+
+.htmltype-selected {
+  color: #fff;
+  background-color: #f44;
+}
+
+.rem5 {
+  font-size: 5rem;
+}
+
+.rem3 {
+  font-size: 3rem;
+}
+
+.editable2 {
+  background-color: #52ff52;
+  color: #fff;
+}
+
+.editable2:hover, .editable:focus {
+  background-color: #111;
+  color: #fff;
+}
+
+.spacing-top {
+  margin-top: 1rem;
+}
+
+.descriptiontext {
+  color: #fff;
+  margin-right: 0.2rem;
+}
