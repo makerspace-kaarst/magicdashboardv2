@@ -39,7 +39,9 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         #self.send_header("Access-Control-Allow-Origin", "*")
         out = bytes('Generic Error/ Not authenticated','utf-16')
         # auto register first UUID
-        if not cache.read(['auth_uuid']):
+        if not cache.read(['config','secure-gets']):
+            pass
+        elif not cache.read(['auth_uuid']):
             args = dictify(self.path.split('?')[1:])
             if 'auth' in args.keys():
                 cache.write(['auth_uuid'],args['auth'])
@@ -51,7 +53,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
                 data = {}
                 if len(self.path.split('?')) > 1:  # if there are GET parameters:
                     data = dictify(self.path.split('?')[1:])  # convert GETs to dict
-                if cache.read(['auth_uuid']) == data['auth']:
+                if not cache.read(['config','secure-gets']) or cache.read(['auth_uuid']) == data['auth']:
                     out = function(data)
                     out = bytes(str(out),'utf-16')  # convert string to returnable format
             else:

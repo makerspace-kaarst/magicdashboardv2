@@ -134,3 +134,24 @@ def windowtitle(*args):
 
 def get_delay(*args):
     return cache.get_raw()['update_delay'][int(args[0]['node_id'])]
+
+def test_upload(*args):
+    if args[0] == {}:
+        crash()
+
+    correction = 8
+    if 'png' in str(args[1][:400]).lower():
+        correction = 7
+    elif 'JFIF' in str(args[1][:400]):
+        correction = 8
+    img = args[1]
+    filename = str(img)[str(img).index('filename="'):str(img).index('filename="')+50]
+    filename = filename[filename.index('"')+1:]
+    filename = filename[:filename.index('"')]
+    img = img[str(img).index('image/')+correction:]
+    img = img[:str(img).index('------')]
+
+    with open('../Frontend/uploads/'+filename,'wb') as f:
+        f.write(img)
+
+    return '<script>alert("upload abgeschlossen")</script>'
