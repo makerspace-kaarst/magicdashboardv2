@@ -72,7 +72,7 @@
                 <button type="button" name="button" class="plusbutton" onclick="save_slide_data()">Save</button>
               </div>
               <div class="flex">
-                <button type="button" name="button" class="plusbutton" onclick="openTemplatingEditor()">Open node templating editor</button>
+                <button type="button" name="button" class="plusbutton" onclick="openTeplatingEditor()">Open node templating editor</button>
               </div>
               <h1 class="leftalign mono border1" contenteditable="true" spellcheck="false" id='node-content-raw'></h1>
             </div>
@@ -83,8 +83,8 @@
     <div class="absolute force-fill hidden" style='background-color:rgba(221, 221, 221, 0.44)' id='templating-main'>
       <div class="htmlgen absolute hidden-flex">
         <div class="flex" style="justify-content:flex-start;background-color:#555" id='templating-presets'>
-          <div class="htmltype link" onclick="selectPresetType(0)">Text</div>
-          <div class="htmltype htmltype-selected link" onclick="selectPresetType(1)">Image</div>
+          <div class="htmltype htmltype-selected link" onclick="selectPresetType(0)">Text</div>
+          <div class="htmltype link" onclick="selectPresetType(1)">Image</div>
           <div class="htmltype plusbutton link flexend" onclick="htmlEditorSave()">Save</div>
         </div>
 
