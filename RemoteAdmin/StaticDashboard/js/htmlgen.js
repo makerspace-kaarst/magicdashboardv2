@@ -42,7 +42,7 @@ function generateHTML(type_id) {
   return final;
 }
 
-function openTeplatingEditor() {
+function openTemplatingEditor() {
   document.getElementById('templating-main')
     .classList.remove('hidden');
 }
