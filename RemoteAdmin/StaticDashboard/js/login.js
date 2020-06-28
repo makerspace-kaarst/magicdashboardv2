@@ -12,6 +12,9 @@ function login() {
     .style = 'display:none';
   document.getElementById('app-main')
     .style = '';
+
+  document.getElementById('form-password')
+    .value = PASSWORD;
   // Bootup update
   updateContext();
 }
