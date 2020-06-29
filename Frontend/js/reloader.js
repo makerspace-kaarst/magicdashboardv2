@@ -27,7 +27,7 @@ function updateNodes(newContentAvailable) {
 function updateNode(html, node) {
   console.log('' + html);
   let subnodes = getSortedSubnodes(node);
-  subnodes[1].innerHTML = html
+  subnodes[1].innerHTML = unescape(html);
   crossfade(subnodes[0], subnodes[1])
 }
 
