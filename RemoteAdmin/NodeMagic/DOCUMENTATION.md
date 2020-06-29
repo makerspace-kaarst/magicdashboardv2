@@ -9,8 +9,8 @@
 - [Edit a slice with the "Node Templating Editor"](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#edit-a-slice-with-the-node-templating-editor)
 - [nothing](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#nothing)
 - [Upload an image](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#upload-an-image)
-- [nothing](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#nothing)
-- [Licence](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#licence)
+- [nothing](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#nothing-1)
+- [License](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#license)
 
 ## Get started
 
