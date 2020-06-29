@@ -14,7 +14,7 @@ add_html|`node_id` `html`|append a new state to any node use `index` to insert t
 remove_html|`node_id` `index`| delete any state
 update_html|`node_id` `index` `html`|change node state content
 set_delay|`node_id` `delay`| how many seconds a node should display it's content before loading the next item
-dump_db||returns json representation of the current server state
+dump_db| |returns json representation of the current server state
 overwrite_uuid|`uuid`|takes a uuid and replaces the currently authenticated one. leaving it blank allows anyone to connect.
 update_title|`title`|change the board title
 update_password|`password`|update the API password. Updates the global PASSWORD variable.
