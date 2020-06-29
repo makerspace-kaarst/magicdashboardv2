@@ -4,13 +4,13 @@
 
 **Topics**
 
-- [Get started](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#L14)
-- [Add a node and add slices](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#L32)
-- [Edit a slice with the "Node Templating Editor"](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#L44)
-- [nothing](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#L64)
-- [Upload an image](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#L70)
-- [nothing](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#L80)
-- [Licence](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#L86)
+- [Get started](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#get-started)
+- [Add a node and add slices](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#add-a-node-and-add-slices)
+- [Edit a slice with the "Node Templating Editor"](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#edit-a-slice-with-the-node-templating-editor)
+- [nothing](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#nothing)
+- [Upload an image](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#upload-an-image)
+- [nothing](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#nothing)
+- [Licence](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#licence)
 
 ## Get started
 
