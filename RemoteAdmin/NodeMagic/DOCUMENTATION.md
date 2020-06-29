@@ -7,9 +7,9 @@
 - [Get started](#get-started)
 - [Add a node and add slices](#add-a-node-and-add-slices)
 - [Edit a slice with the "Node Templating Editor"](#edit-a-slice-with-the-node-templating-editor)
-- [nothing](#nothing)
+- [Remove a node or a slice](#remove-a-node-or-a-slice)
+- [Changing the duration of the slices](#changing-the-duration-of-the-slices)
 - [Upload an image](#upload-an-image)
-- [nothing](d#nothing-1)
 - [License](#license)
 
 ## Get started
@@ -61,9 +61,28 @@
 
 ---
 
-## nothing
+## Remove a node or a slice
 
-content
+### Remove a node
+
+- To remove a node, after you have selected the desired node, click on the "Delete Node" button, which can be seen at the top center of the page.
+
+  ![Delete a node](img/delete_a_node.png)
+
+### Remove a slice
+
+- If you want to remove a slice, press the "-" button under the desired slice.
+
+  ![Delete a slice](img/delete_a_slice.png)
+
+---
+
+## Changing the duration of the slices
+
+- The editing of the duration between slices changes can be set using the text field in the upper-center area.
+- There you can set in seconds how long the time between the changes is.
+
+  ![Changing the duration of the slices](img/changing_the_duration_of_the_slices.png)
 
 ---
 
@@ -73,13 +92,9 @@ content
 
   ![Upload an image](img/upload_an_image.png)
 
+- After uploading the image, you can insert the image into a slice using the "Node Templating Editor". To do this, you need a headline and the file name of the image (for example: "img001.png").
+
 ***ATTENTION:*** The uploader can only process PNG and JPEG files. Other files will be uploaded, but you cannot use them.
-
----
-
-## nothing
-
-content
 
 ---
 
