@@ -4,13 +4,13 @@
 
 **Topics**
 
-- [Get started](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#get-started)
-- [Add a node and add slices](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#add-a-node-and-add-slices)
-- [Edit a slice with the "Node Templating Editor"](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#edit-a-slice-with-the-node-templating-editor)
-- [nothing](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#nothing)
-- [Upload an image](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#upload-an-image)
-- [nothing](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#nothing-1)
-- [License](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#license)
+- [Get started](#get-started)
+- [Add a node and add slices](#add-a-node-and-add-slices)
+- [Edit a slice with the "Node Templating Editor"](#edit-a-slice-with-the-node-templating-editor)
+- [nothing](#nothing)
+- [Upload an image](#upload-an-image)
+- [nothing](d#nothing-1)
+- [License](#license)
 
 ## Get started
 
@@ -35,7 +35,7 @@
 
   <a href="http://makerspace.jh220.de"><img src="https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION_files/add_a_node.png" title="Add a node" alt="Add a node"></a>
 
-- After creating the node you can create different slices with the green "+" button and [then you can edit them with the "Node Templating Editor"](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#L1).
+- After creating the node you can create different slices with the green "+" button and [then you can edit them with the "Node Templating Editor"](#edit-a-slice-with-the-node-templating-editor).
 
   <a href="http://makerspace.jh220.de"><img src="https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION_files/add_a_slice.png" title="Add a slice" alt="Add a slice"></a>
 
