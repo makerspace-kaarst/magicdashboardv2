@@ -1,5 +1,0 @@
-This server is not used, all requests wil be done against the live system using
-Javascript XHR requests, that makes it even more portable.
-
-It's a potential backup solution if needed, so please:
-DO NOT DELETE THIS FOLDER!
