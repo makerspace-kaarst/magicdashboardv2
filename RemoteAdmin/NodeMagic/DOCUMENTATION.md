@@ -12,6 +12,13 @@
 - [Upload an image](#upload-an-image)
 - [License](#license)
 
+<!---
+TODO:
+
+- [Delete an image](#delete-an-image]
+- 
+--->
+
 ## Get started
 
 > Here you can see the login data, which you need to log in at the admin panel.
