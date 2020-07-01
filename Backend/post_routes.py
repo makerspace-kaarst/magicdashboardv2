@@ -162,7 +162,7 @@ def http_upload(*args):
         if not cache.read(['config'])['secure-api'] or password == cache.read(['config'])['password']:
             with open('../Frontend/uploads/' + filename, 'wb') as f:
                 f.write(img)
-            return '<script>alert("Upload done")</script>'
+            return ''
         else:
             return '<script>alert("Authentication eror")</script>'
     except ValueError:

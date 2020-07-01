@@ -1,3 +1,4 @@
+var RELOADER_ID = 0;
 var html_template = `<div class="image-node-container hidden-flex">
 <div class="flex-fill"></div>
   <div style="position:relative;">
@@ -8,7 +9,25 @@ var html_template = `<div class="image-node-container hidden-flex">
   <button type="button" name="button" class="image-delete" onclick="deleteImage('[filename]')">Delete file</button>
 </div>`
 
-function openImageList() {
+var upload_image = `<div class="hidden-flex" style="color:#fff">
+    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+    <form id="uploadbanner" enctype="multipart/form-data" method="post"
+          action="http://localhost:1337/http_upload" target="dummyframe">
+        <input id="fileupload" name="myfile" type="file"/>
+        <input type="hidden" name='password' id="form-password" value=""/>
+        <input type="submit" value="submit" id="submit"/>
+    </form>
+</div>`
+
+function openImageList(){
+  clearInterval(RELOADER_ID);
+  RELOADER_ID = setInterval(function () {
+    _openImageList()
+  }, 500);
+  _openImageList();
+}
+
+function _openImageList() {
   document.getElementById('image-list-main')
     .classList.remove('hidden');
 
@@ -18,6 +37,7 @@ function openImageList() {
 }
 
 function closeImageList() {
+    clearInterval(RELOADER_ID);
     document.getElementById('image-list-main')
         .classList.add('hidden');
 }
