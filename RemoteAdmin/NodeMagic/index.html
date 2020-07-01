@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html dir="ltr" lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>NodeMagic</title>
 
-    <link rel="stylesheet" href="css/buttons.css">
-    <link rel="stylesheet" href="css/containers.css">
-    <link rel="stylesheet" href="css/presets.css">
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/htmlgen.css">
+    <link href="css/buttons.css" rel="stylesheet">
+    <link href="css/containers.css" rel="stylesheet">
+    <link href="css/presets.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <link href="css/htmlgen.css" rel="stylesheet">
 
     <script charset="utf-8">
         SERVER = '';
@@ -17,11 +17,11 @@
         PASSWORD = '';
 
     </script>
-    <script src="js/api.js" charset="utf-8"></script>
-    <script src="js/context.js" charset="utf-8"></script>
-    <script src="js/login.js" charset="utf-8"></script>
-    <script src="js/htmlgen.js" charset="utf-8"></script>
-    <script src="js/imagelist.js" charset="utf-8"></script>
+    <script charset="utf-8" src="js/api.js"></script>
+    <script charset="utf-8" src="js/context.js"></script>
+    <script charset="utf-8" src="js/login.js"></script>
+    <script charset="utf-8" src="js/htmlgen.js"></script>
+    <script charset="utf-8" src="js/imagelist.js"></script>
 </head>
 
 <body>
@@ -29,16 +29,16 @@
     <div class="login hidden-flex">
         <h1 class="center mono" style="color:#ffffff;font-size:3rem;">NodeBoard Login</h1>
         <div class="login-inputs">
-            <input type="text" name="" value="" placeholder="Board IP" id="login-ip">
-            <input type="number" name="" value="" placeholder="Server Port" id="login-port">
-            <input type="password" name="" value="" placeholder="API Key" id="login-key">
-            <button type="button" name="button" class="plusbutton" style="padding:1rem" onclick="login()">Login</button>
+            <input id="login-ip" name="" placeholder="Board IP" type="text" value="">
+            <input id="login-port" name="" placeholder="Server Port" type="number" value="">
+            <input id="login-key" name="" placeholder="API Key" type="password" value="">
+            <button class="plusbutton" name="button" onclick="login()" style="padding:1rem" type="button">Login</button>
         </div>
     </div>
 </div>
-<div class="app absolute" style="display:none" id="app-main">
+<div class="app absolute" id="app-main" style="display:none">
     <div class="topbar grid">
-        <h1 class="mono editable leftalign" contenteditable="true" onblur="update_title(this.innerText)" id="page-title"
+        <h1 class="mono editable leftalign" contenteditable="true" id="page-title" onblur="update_title(this.innerText)"
             style='white-space: nowrap;'>Title</h1>
     </div>
     <div class="sidebar">
@@ -48,19 +48,19 @@
         <div class="flexend" style="margin:0;margin-top:auto">
             <div class="node flex darkgrey">
                 <h1 class="mono smallcaps">Add a node</h1>
-                <button type="button" name="button" class="plusbutton" onclick="add_node()">+</button>
+                <button class="plusbutton" name="button" onclick="add_node()" type="button">+</button>
             </div>
             <div class="node hidden-flex darkgrey">
-                <button type="button" name="button" class="plusbutton" onclick="openImageList()">Open images</button>
+                <button class="plusbutton" name="button" onclick="openImageList()" type="button">Open images</button>
             </div>
             <div class="node hidden-flex darkgrey">
                 <h1 class="mono smallcaps">Upload an image</h1>
-                <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
-                <form id="uploadbanner" enctype="multipart/form-data" method="post"
-                      action="http://localhost:1337/http_upload" target="dummyframe">
+                <iframe id="dummyframe" name="dummyframe" style="display: none;"></iframe>
+                <form action="http://localhost:1337/http_upload" enctype="multipart/form-data" id="uploadbanner"
+                      method="post" target="dummyframe">
                     <input id="fileupload" name="myfile" type="file"/>
-                    <input type="hidden" name='password' id="form-password" value=""/>
-                    <input type="submit" value="submit" id="submit"/>
+                    <input id="form-password" name='password' type="hidden" value=""/>
+                    <input id="submit" type="submit" value="submit"/>
                 </form>
 
             </div>
@@ -72,9 +72,9 @@
             <div class="topbar" style='background-color:inherit;'>
                 <h1 class='mono leftalign' id='node-hub-node-id'>node_id: 0</h1>
                 <h1 class='mono leftalign' id='node-hub-slides'>slides: 0</h1>
-                <h1 class="mono nodeval link" style="background-color: #b56262;" id='delete-node'>Delete Node</h1>
-                <input type="number" name="" value="5" style="min-height:60px;font-size:2rem;color:#000"
-                       onblur="save_slide_time()" id="slide-timer">
+                <h1 class="mono nodeval link" id='delete-node' style="background-color: #b56262;">Delete Node</h1>
+                <input id="slide-timer" name="" onblur="save_slide_time()" style="min-height:60px;font-size:2rem;color:#000"
+                       type="number" value="5">
             </div>
             <div class="grid grid4x" id="node-hub-grid">
             </div>
@@ -88,23 +88,23 @@
                     <div class="flex">
                         <h1 style="padding-right:1rem;">Node content: <span style='color:#8ecc93'><b>Raw HTML dump:</b></span>
                         </h1>
-                        <button type="button" name="button" class="plusbutton" onclick="save_slide_data()">Save</button>
+                        <button class="plusbutton" name="button" onclick="save_slide_data()" type="button">Save</button>
                     </div>
                     <div class="flex">
-                        <button type="button" name="button" class="plusbutton" onclick="openTemplatingEditor()">Open
+                        <button class="plusbutton" name="button" onclick="openTemplatingEditor()" type="button">Open
                             node templating editor
                         </button>
                     </div>
-                    <h1 class="leftalign mono border1" contenteditable="true" spellcheck="false"
-                        id='node-content-raw'></h1>
+                    <h1 class="leftalign mono border1" contenteditable="true" id='node-content-raw'
+                        spellcheck="false"></h1>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="absolute force-fill hidden" style='background-color:rgba(221, 221, 221, 0.44)' id='templating-main'>
+<div class="absolute force-fill hidden" id='templating-main' style='background-color:rgba(221, 221, 221, 0.44)'>
     <div class="htmlgen absolute hidden-flex">
-        <div class="flex" style="justify-content:flex-start;background-color:#555" id='templating-presets'>
+        <div class="flex" id='templating-presets' style="justify-content:flex-start;background-color:#555">
             <div class="htmltype htmltype-selected link" onclick="selectPresetType(0)">Text</div>
             <div class="htmltype link" onclick="selectPresetType(1)">Image</div>
             <div class="htmltype link" onclick="selectPresetType(2)">Keyword</div>
@@ -131,7 +131,7 @@
         </div>
     </div>
 </div>
-<div class="absolute force-fill hidden" style='background-color:rgba(221, 221, 221, 0.44)' id='imagelist-main'>
+<div class="absolute force-fill hidden" id='imagelist-main' style='background-color:rgba(221, 221, 221, 0.44)'>
     <div class="flex-fill">
         <h1>Image List</h1>
 
