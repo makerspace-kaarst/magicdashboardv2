@@ -33,5 +33,9 @@ function makeFileList(files) {
 
 
 function deleteImage(filename){
-  alert(filename);
+  APIRequest('/delete_file',{'filename':filename},function(){
+    setTimeout(function () {
+      openImageList();
+    }, 150);
+  });
 }

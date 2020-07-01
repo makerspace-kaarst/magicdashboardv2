@@ -18,11 +18,13 @@ def upload_file(*args):
 
 # Deletes a file from /uploads
 def delete_file(*args):
+    print(args[0])
     filename = args[0]['filename']
     if '..' in filename:  # no directory traversal
         return "Nope"
     try:  # Delet the fiile, bu don't tell the user abput errors, tht would enable destructive enumeration
         _os_remove_file("../Frontend/uploads/" + filename)
+        db = cache.get_raw()
         db['force_update'] = True
         return 'OK'
     except FileNotFoundError:
