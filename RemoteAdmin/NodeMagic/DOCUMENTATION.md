@@ -105,6 +105,16 @@ TODO:
 
 ---
 
+<!---
+
+## Delete an image
+
+TODO
+
+---
+
+--->
+
 ## License
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](/LICENSE)
