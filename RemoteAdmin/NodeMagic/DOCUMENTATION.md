@@ -4,13 +4,20 @@
 
 **Topics**
 
-- [Get started](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#get-started)
-- [Add a node and add slices](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#add-a-node-and-add-slices)
-- [Edit a slice with the "Node Templating Editor"](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#edit-a-slice-with-the-node-templating-editor)
-- [nothing](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#nothing)
-- [Upload an image](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#upload-an-image)
-- [nothing](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#nothing-1)
-- [License](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#license)
+- [Get started](#get-started)
+- [Add a node and add slices](#add-a-node-and-add-slices)
+- [Edit a slice with the "Node Templating Editor"](#edit-a-slice-with-the-node-templating-editor)
+- [Remove a node or a slice](#remove-a-node-or-a-slice)
+- [Changing the duration of the slices](#changing-the-duration-of-the-slices)
+- [Upload an image](#upload-an-image)
+- [License](#license)
+
+<!---
+TODO:
+
+- [Delete an image](#delete-an-image]
+- 
+--->
 
 ## Get started
 
@@ -33,11 +40,11 @@
 
 - To create a node with the NodeMagic editor, click the "Add a node" button at the bottom left.
 
-  <a href="http://makerspace.jh220.de"><img src="https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION_files/add_a_node.png" title="Add a node" alt="Add a node"></a>
+  ![Add a node](img/add_a_node.png)
 
-- After creating the node you can create different slices with the green "+" button and [then you can edit them with the "Node Templating Editor"](https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION.md#L1).
+- After creating the node you can create different slices with the green "+" button and [then you can edit them with the "Node Templating Editor"](#edit-a-slice-with-the-node-templating-editor).
 
-  <a href="http://makerspace.jh220.de"><img src="https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION_files/add_a_slice.png" title="Add a slice" alt="Add a slice"></a>
+  ![Add a slice](img/add_a_slice.png)
 
 ---
 
@@ -45,25 +52,44 @@
 
 - After creating a slice, you can open it by clicking on the created slice.
 
-<a href="http://makerspace.jh220.de"><img src="https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION_files/click_on_a_slice.png" title="Click on a slice" alt="Click on a slice"></a>
+  ![Click on a slice](img/click_on_a_slice.png)
 
 - Then you can click on the "Open node templating editor" button to open the HTML generator for the slice.
 
-<a href="http://makerspace.jh220.de"><img src="https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION_files/open_node_templating_editor.png" title="Open node templating editor" alt="Open node templating editor"></a>
+  ![Open node templating editor](img/open_node_templating_editor.png)
 
 - There are then different selection options, which can then be changed according to the desired operation.
 
-<a href="http://makerspace.jh220.de"><img src="https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION_files/click_on_a_slice.png" title="Click on a slice" alt="Click on a slice"></a>
+  ![Click on a slice](img/click_on_a_slice.png)
 
 - When you have selected and filled out the desired option, you can click on "Save" above and then confirm the generated HTML text again with "Save".
 
-<a href="http://makerspace.jh220.de"><img src="https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION_files/save.png" title="Save" alt="Save"></a>
+  ![Save](img/save.png)
 
 ---
 
-## nothing
+## Remove a node or a slice
 
-content
+### Remove a node
+
+- To remove a node, after you have selected the desired node, click on the "Delete Node" button, which can be seen at the top center of the page.
+
+  ![Delete a node](img/delete_a_node.png)
+
+### Remove a slice
+
+- If you want to remove a slice, press the "-" button under the desired slice.
+
+  ![Delete a slice](img/delete_a_slice.png)
+
+---
+
+## Changing the duration of the slices
+
+- The editing of the duration between slices changes can be set using the text field in the upper-center area.
+- There you can set in seconds how long the time between the changes is.
+
+  ![Changing the duration of the slices](img/changing_the_duration_of_the_slices.png)
 
 ---
 
@@ -71,21 +97,29 @@ content
 
 - To add an image in the "Node Templating Editor", you need to add the desired image in the main menu under "Upload an image" at the bottom left.
 
-<a href="http://makerspace.jh220.de"><img src="https://github.com/makerspace-kaarst/magicdashboard/blob/master/RemoteAdmin/NodeMagic/DOCUMENTATION_files/upload_an_image.png" title="Upload an image" alt="Upload an image"></a>
+  ![Upload an image](img/upload_an_image.png)
+
+- After uploading the image, you can insert the image into a slice using the "Node Templating Editor". To do this, you need a headline and the file name of the image (for example: "img001.png").
 
 ***ATTENTION:*** The uploader can only process PNG and JPEG files. Other files will be uploaded, but you cannot use them.
 
 ---
 
-## nothing
+<!---
 
-content
+## Delete an image
+
+TODO
 
 ---
 
+--->
+
 ## License
 
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](/LICENSE)
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2020 © <a href="http://makerspace.jh220.de" target="_blank">Makerspace Kaarst</a>.
+
+> Also see: [LICENSE file](/LICENSE)
