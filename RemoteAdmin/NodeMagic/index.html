@@ -38,9 +38,15 @@
     </div>
 </div>
 <div class="app absolute" style="display:none" id="app-main">
-    <div class="topbar grid">
+    <div class="topbar" style="display:flex;justify-content:flex-start;align-items:center">
         <h1 class="mono editable leftalign" contenteditable="true" onblur="update_title(this.innerText)" id="page-title"
             style='white-space: nowrap;'>Title</h1>
+          <div class="flex mono" style="margin:.5rem;margin-left:auto;font-size:2rem">
+            <h3>rows:</h3>
+            <input type="number" name="" value="" style="width:4rem;margin-right:2rem;color:#000;font-size:1.5rem">
+            <h3>columns:</h3>
+            <input type="number" name="" value="" style="width:4rem;margin-right:2rem;color:#000;font-size:1.5rem">
+          </div>
     </div>
     <div class="sidebar">
         <div class="" id="sidebar-content">
@@ -64,7 +70,7 @@
                 <h1 class='mono leftalign' id='node-hub-node-id'>node_id: 0</h1>
                 <h1 class='mono leftalign' id='node-hub-slides'>slides: 0</h1>
                 <h1 class="mono nodeval link" style="background-color: #b56262;" id='delete-node'>Delete Node</h1>
-                <input type="number" name="" value="5" style="min-height:60px;font-size:2rem;color:#000"
+                <input type="number" name="" value="5" style="min-height:40px;min-width:8rem;font-size:1.5rem;color:#000;margin-left:5rem;"
                        onblur="save_slide_time()" id="slide-timer">
             </div>
             <div class="grid grid4x" id="node-hub-grid">
