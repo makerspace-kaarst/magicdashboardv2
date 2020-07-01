@@ -11,7 +11,7 @@ def read(item_location):
 
 
 # write to _DB
-def write(item_location,value):
+def write(item_location, value):
     global _DB
     out = _DB
     for layer in item_location[:-1]:
@@ -31,6 +31,7 @@ def delete(item_location):
 def hard_set(db):  # Set _DB to dict, use for init
     global _DB
     _DB = db
+
 
 def get_raw():
     global _DB

@@ -1,7 +1,7 @@
-String.prototype.replaceAll = function(search, replacement) {
-  var target = this;
-  return target.split(search)
-    .join(replacement);
+String.prototype.replaceAll = function (search, replacement) {
+    var target = this;
+    return target.split(search)
+        .join(replacement);
 };
 
 var CONTEXT = {}
@@ -27,146 +27,147 @@ var NODE_HUB_ADD_NODE = `<div class="plusbutton node lightgrey-bg mono flex" sty
 </div>`
 
 function updateContext() {
-  APIRequest('/db', {}, function(source) {
-    source = JSON.parse(source);
-    CONTEXT = source;
-    document.getElementById('sidebar-content')
-      .innerHTML = update_sidebar(source['node_html'])
-  });
-  APIRequest('/windowtitle', {}, function(title) {
-    document.getElementById('page-title')
-      .innerText = title;
-  })
+    APIRequest('/db', {}, function (source) {
+        source = JSON.parse(source);
+        CONTEXT = source;
+        document.getElementById('sidebar-content')
+            .innerHTML = update_sidebar(source['node_html'])
+    });
+    APIRequest('/windowtitle', {}, function (title) {
+        document.getElementById('page-title')
+            .innerText = title;
+    })
 }
 
 function update_sidebar(node_html) {
-  let out = "";
-  for (var i = 0; i < node_html.length; i++) {
-    out += SIDEBAR_NODE.replace('[slides]', node_html[i].length)
-      .replaceAll('[node_id]', '' + i) + '\n';
-  }
-  return out;
+    let out = "";
+    for (var i = 0; i < node_html.length; i++) {
+        out += SIDEBAR_NODE.replace('[slides]', node_html[i].length)
+            .replaceAll('[node_id]', '' + i) + '\n';
+    }
+    return out;
 }
 
 function hub_builder(node_id) {
 
-  APIRequest('/get_delay', {
-    'node_id': node_id
-  }, function(delay) {
-    document.getElementById('slide-timer')
-      .value = parseInt(delay);
-  });
+    APIRequest('/get_delay', {
+        'node_id': node_id
+    }, function (delay) {
+        document.getElementById('slide-timer')
+            .value = parseInt(delay);
+    });
 
-  document.getElementById('delete-node')
-    .onclick = function() {
-      let tmp = document.getElementById('node-hub-node-id')
-        .innerText.split(' ')
-      delete_node(tmp[tmp.length - 1]);
+    document.getElementById('delete-node')
+        .onclick = function () {
+        let tmp = document.getElementById('node-hub-node-id')
+            .innerText.split(' ')
+        delete_node(tmp[tmp.length - 1]);
     }
-  try {
-    document.getElementById('node-hub')
-      .classList.remove("hidden")
-  } catch (e) {}
-  let slides = CONTEXT['node_html'][node_id];
-  document.getElementById('node-hub-node-id')
-    .innerText = 'node_id: ' + node_id;
-  document.getElementById('node-hub-slides')
-    .innerText = 'slides: ' + slides.length;
+    try {
+        document.getElementById('node-hub')
+            .classList.remove("hidden")
+    } catch (e) {
+    }
+    let slides = CONTEXT['node_html'][node_id];
+    document.getElementById('node-hub-node-id')
+        .innerText = 'node_id: ' + node_id;
+    document.getElementById('node-hub-slides')
+        .innerText = 'slides: ' + slides.length;
 
-  let grid_content = ""
-  for (var i = 0; i < slides.length; i++) {
-    grid_content += NODE_HUB_GRID_NODE.replace('[type]', categorize_html(slides[i]))
-      .replaceAll('[slide_id]', '' + i)
-      .replaceAll('[node_id]', '' + node_id);
-  }
-  grid_content += NODE_HUB_ADD_NODE.replace('[node_id]', '' + node_id);
-  document.getElementById('node-hub-grid')
-    .innerHTML = grid_content;
+    let grid_content = ""
+    for (var i = 0; i < slides.length; i++) {
+        grid_content += NODE_HUB_GRID_NODE.replace('[type]', categorize_html(slides[i]))
+            .replaceAll('[slide_id]', '' + i)
+            .replaceAll('[node_id]', '' + node_id);
+    }
+    grid_content += NODE_HUB_ADD_NODE.replace('[node_id]', '' + node_id);
+    document.getElementById('node-hub-grid')
+        .innerHTML = grid_content;
 }
 
 function categorize_html(html) {
-  out = "raw"
-  return out;
+    out = "raw"
+    return out;
 }
 
 function add_slide(node_id) {
-  APIRequest("/manage_node", {
-    'node_id': node_id,
-    'action': 'add',
-    'index': 99999,
-    'html': ""
-  }, function() {
-    updateContext();
-    setTimeout(function(node_id) {
-      hub_builder(node_id);
-    }, 30, node_id);
-  })
+    APIRequest("/manage_node", {
+        'node_id': node_id,
+        'action': 'add',
+        'index': 99999,
+        'html': ""
+    }, function () {
+        updateContext();
+        setTimeout(function (node_id) {
+            hub_builder(node_id);
+        }, 30, node_id);
+    })
 }
 
 function edit_slide(node_id, slide_id) {
-  CONTEXT_META = [node_id, slide_id]
-  document.getElementById('slide')
-    .classList.remove('hidden');
-  document.getElementById('node-hub')
-    .classList.add("hidden")
-  let current_code = CONTEXT['node_html'][node_id][slide_id];
-  document.getElementById('node-content-raw')
-    .innerText = current_code;
+    CONTEXT_META = [node_id, slide_id]
+    document.getElementById('slide')
+        .classList.remove('hidden');
+    document.getElementById('node-hub')
+        .classList.add("hidden")
+    let current_code = CONTEXT['node_html'][node_id][slide_id];
+    document.getElementById('node-content-raw')
+        .innerText = current_code;
 }
 
 function delete_slide(node_id, slide_id) {
-  APIRequest("/manage_node", {
-    'node_id': node_id,
-    'action': 'remove',
-    'index': slide_id,
-  }, function() {
-    updateContext();
-    setTimeout(function(node_id) {
-      hub_builder(node_id);
-    }, 30, node_id);
-  })
+    APIRequest("/manage_node", {
+        'node_id': node_id,
+        'action': 'remove',
+        'index': slide_id,
+    }, function () {
+        updateContext();
+        setTimeout(function (node_id) {
+            hub_builder(node_id);
+        }, 30, node_id);
+    })
 }
 
 function add_node() {
-  APIRequest("/add_node", {
-    'node_id': 99
-  }, updateContext)
+    APIRequest("/add_node", {
+        'node_id': 99
+    }, updateContext)
 }
 
 function delete_node(node_id) {
-  APIRequest("/delete_node", {
-    'node_id': node_id
-  }, updateContext)
-  if (node_id != 0) {
-    hub_builder(node_id - 1);
-  } else {
-    document.getElementById('node-hub')
-      .classList.add("hidden")
-  }
+    APIRequest("/delete_node", {
+        'node_id': node_id
+    }, updateContext)
+    if (node_id != 0) {
+        hub_builder(node_id - 1);
+    } else {
+        document.getElementById('node-hub')
+            .classList.add("hidden")
+    }
 }
 
 function save_slide_data() {
-  APIRequest('/manage_node', {
-    'node_id': CONTEXT_META[0],
-    'action': 'update',
-    'index': CONTEXT_META[1],
-    'html': document.getElementById('node-content-raw')
-      .innerText
-  }, updateContext);
+    APIRequest('/manage_node', {
+        'node_id': CONTEXT_META[0],
+        'action': 'update',
+        'index': CONTEXT_META[1],
+        'html': document.getElementById('node-content-raw')
+            .innerText
+    }, updateContext);
 }
 
 function update_title(text) {
-  APIRequest('/update_title', {
-    'title': text
-  }, sinkhole);
+    APIRequest('/update_title', {
+        'title': text
+    }, sinkhole);
 }
 
 function save_slide_time() {
-  APIRequest('/manage_node', {
-    'node_id': CONTEXT_META[0],
-    'action': 'delay',
-    'index': CONTEXT_META[1],
-    'delay': parseInt(document.getElementById('slide-timer')
-      .value)
-  }, updateContext);
+    APIRequest('/manage_node', {
+        'node_id': CONTEXT_META[0],
+        'action': 'delay',
+        'index': CONTEXT_META[1],
+        'delay': parseInt(document.getElementById('slide-timer')
+            .value)
+    }, updateContext);
 }

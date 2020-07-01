@@ -1,36 +1,36 @@
 .fake-radio {
-  background-color: #525252;
-  font-size: 2rem;
-  margin-left: 1rem;
-  padding: 1rem;
-  min-width: 6rem;
-  text-align: center;
+    background-color: #525252;
+    font-size: 2rem;
+    margin-left: 1rem;
+    padding: 1rem;
+    min-width: 6rem;
+    text-align: center;
 }
 
 .fake-radio-active {
-  background-color: #ff5252;
+    background-color: #ff5252;
 }
 
 .plusbutton {
-  background-color: #62b565 !important;
-  border: none;
-  min-width: 60px;
-  min-height: 60px;
-  font-size: 300%;
-  color: #fff;
-  font-family: serif;
-  text-align: center;
-  cursor: pointer;
+    background-color: #62b565 !important;
+    border: none;
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 300%;
+    color: #fff;
+    font-family: serif;
+    text-align: center;
+    cursor: pointer;
 }
 
 .minusbutton {
-  background-color: #b56262;
-  border: none;
-  min-width: 60px;
-  min-height: 60px;
-  font-size: 300%;
-  color: #fff;
-  font-family: serif;
-  text-align: center;
-  cursor: pointer;
+    background-color: #b56262;
+    border: none;
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 300%;
+    color: #fff;
+    font-family: serif;
+    text-align: center;
+    cursor: pointer;
 }

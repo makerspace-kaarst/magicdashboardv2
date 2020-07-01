@@ -1,67 +1,67 @@
 :root {
-  --topbar-height: 50px;
-  --sidebar-width: 15%;
+    --topbar-height: 50px;
+    --sidebar-width: 15%;
 }
 
 html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #222;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
 }
 
 .app {
-  display: grid;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  grid-template-rows: var(--topbar-height) calc(100% - var(--topbar-height));
-  grid-template-columns: var(--sidebar-width) calc(100% - var(--sidebar-width));
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    grid-template-rows: var(--topbar-height) calc(100% - var(--topbar-height));
+    grid-template-columns: var(--sidebar-width) calc(100% - var(--sidebar-width));
 }
 
 .topbar {
-  background-color: #333;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  text-align: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  width: 100%;
+    background-color: #333;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
 }
 
 .topbar * {
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #fff;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: #fff;
 }
 
 .sidebar {
-  background-color: #3e3e3e;
-  grid-column-start: 1;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+    background-color: #3e3e3e;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .node {
-  background-color: #525252;
-  min-height: 5rem;
-  margin: 1rem;
-  color: #fff;
+    background-color: #525252;
+    min-height: 5rem;
+    margin: 1rem;
+    color: #fff;
 }
 
 .grid4x {
-  grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .content {
-  background-color: #525252;
+    background-color: #525252;
 }
