@@ -16,7 +16,6 @@ var SIDEBAR_NODE = `<div class="node link" onclick="hub_builder([node_id])">
 var NODE_HUB_GRID_NODE = `<div class="node lightgrey-bg mono hidden-flex" style="min-height:14rem">
 <div class="force-fill link" onclick="edit_slide([node_id],[slide_id])">
 <h1>Slide slide_id: <span class="value">[slide_id]</span></h1>
-  <h1>Slide type: <span class="value">[type]</span></h1>
   </div>
   <button type="button" name="button" class="minusbutton" style="width:100%;margin-top:auto;" onclick="delete_slide([node_id],[slide_id])">-</button>
 </div>
