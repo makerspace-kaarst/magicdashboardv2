@@ -18,7 +18,6 @@ def upload_file(*args):
 
 # Deletes a file from /uploads
 def delete_file(*args):
-    print(args[0])
     filename = args[0]['filename']
     if '..' in filename:  # no directory traversal
         return "Nope"
