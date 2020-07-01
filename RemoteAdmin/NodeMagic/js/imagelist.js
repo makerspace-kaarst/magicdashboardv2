@@ -1,7 +1,7 @@
 var html_template = `<div class="image-node-container hidden-flex">
 <div class="flex-fill"></div>
   <div style="position:relative;">
-    <img class='image-node max100' src="../../Frontend/uploads/[filename]" alt="">
+    <img class='image-node max100' src="[server]:[port]/uploads/[filename]" alt="">
     <h1 class="absolute filename">[filename]</h1>
   </div>
   <div class="flex-fill"></div>
@@ -26,7 +26,7 @@ function makeFileList(files) {
   out = "";
   files = JSON.parse(files);
   for (var i = 0; i < files.length; i++) {
-    out += html_template.split('[filename]').join(files[i])
+    out += (html_template.split('[filename]').join(files[i])).replace('[server]',SERVER).replace('[port]',PORT);
   }
   document.getElementById('image-list-content').innerHTML = out;
 }
