@@ -7,7 +7,7 @@ templates = [
 
   `<div class="flex-provider">
     <h1>[template-headline]</h1>
-    <img src="uploads/[template-content]" alt="" class="smart-image">
+    <img src="../Frontend/uploads/[template-content]" alt="" class="smart-image">
   </div>`,
 
   `<div class="center-content" style="font-size:3rem;font-family:monospace">
