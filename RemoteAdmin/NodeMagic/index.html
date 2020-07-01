@@ -51,19 +51,9 @@
                 <h1 class="mono smallcaps">Add a node</h1>
                 <button type="button" name="button" class="plusbutton" onclick="add_node()">+</button>
             </div>
-            <div class="node hidden-flex darkgrey">
-                <button type="button" name="button" class="plusbutton" onclick="openImageList()">Open images</button>
-            </div>
-            <div class="node hidden-flex darkgrey">
-                <h1 class="mono smallcaps">Upload an image</h1>
-                <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
-                <form id="uploadbanner" enctype="multipart/form-data" method="post"
-                      action="http://localhost:1337/http_upload" target="dummyframe">
-                    <input id="fileupload" name="myfile" type="file"/>
-                    <input type="hidden" name='password' id="form-password" value=""/>
-                    <input type="submit" value="submit" id="submit"/>
-                </form>
-
+            <div class="node flex darkgrey">
+                <h1 class="mono smallcaps">Manage uploads</h1>
+                <button type="button" name="button" class="plusbutton" onclick="openImageList()">+</button>
             </div>
         </div>
 
@@ -119,7 +109,7 @@
             </div>
 
             <div class="hidden">
-                <h1 class="mono editable2 center rem5 template-headline" contenteditable="true">Headline</h1>
+                <h1 class="mono editable2 rem5 template-headline" contenteditable="true">Headline</h1>
                 <div class="flex-row">
                     <h3 class="mono descriptiontext center rem3 spacing-top">Image name:</h3>
                     <h3 class="mono editable2 center rem3 spacing-top template-content" contenteditable="true">
@@ -132,10 +122,21 @@
         </div>
     </div>
 </div>
-<div class="absolute force-fill hidden" style='background-color:rgba(221, 221, 221, 0.44)' id='image-list-main'>
+<div class="absolute force-fill hidden" style='background-color:rgba(0,0,0, 0.8)' id='image-list-main'>
   <div class="flex-fill">
-    <div class="flex" style="margin:2rem;">
+    <div class="flex" style="margin:2rem;align-items:flex-end">
       <h1 class="mono rem3" style="color:#fff;padding:0;margin:0">Images in /uploads</h1>
+
+      <div class="hidden-flex flexend" style="background-color: #222; height:100%; padding: 0.3rem;text-align:center;color:#fff">
+          <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+          <form id="uploadbanner" enctype="multipart/form-data" method="post"
+                action="http://localhost:1337/http_upload" target="dummyframe">
+              <input id="fileupload" name="myfile" type="file"/>
+              <input type="hidden" name='password' id="form-password" value=""/>
+              <input type="submit" value="submit" id="submit"/>
+          </form>
+      </div>
+
       <button type="button" name="button" class="flexend minusbutton" onclick="closeImageList()">Close</button>
     </div>
     <div class="grid grid4x" style="grid-gap:0.5rem;padding:0.5rem" id='image-list-content'>
