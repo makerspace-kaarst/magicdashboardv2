@@ -150,8 +150,8 @@ function save_slide_data() {
     'node_id': CONTEXT_META[0],
     'action': 'update',
     'index': CONTEXT_META[1],
-    'html': escape(document.getElementById('node-content-raw')
-      .innerText)
+    'html': document.getElementById('node-content-raw')
+      .innerText
   }, updateContext);
 }
 
