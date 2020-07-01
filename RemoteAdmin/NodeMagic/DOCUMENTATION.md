@@ -9,15 +9,8 @@
 - [Edit a slice with the "Node Templating Editor"](#edit-a-slice-with-the-node-templating-editor)
 - [Remove a node or a slice](#remove-a-node-or-a-slice)
 - [Changing the duration of the slices](#changing-the-duration-of-the-slices)
-- [Upload an image](#upload-an-image)
+- [Open images (Upload, View and Delete)](#open-images-upload-view-and-delete)
 - [License](#license)
-
-<!---
-TODO:
-
-- [Delete an image](#delete-an-image]
-- 
---->
 
 ## Get started
 
@@ -66,6 +59,8 @@ TODO:
 
   ![Save](img/save.png)
 
+> In order to insert an image in the "Node Templating Editor", you have to upload an image. (For further information see [Upload an image](#upload-an-image)
+
 ---
 
 ## Remove a node or a slice
@@ -93,9 +88,15 @@ TODO:
 
 ---
 
-## Upload an image
+## Open images (Upload, View and Delete)
 
-- To add an image in the "Node Templating Editor", you need to add the desired image in the main menu under "Upload an image" at the bottom left.
+- First open our image manager by clicking the "Open images" button in the main menu.
+
+  ![Open images](img/open_images.png)
+
+### Upload an image
+
+- To upload an image, click on the button in the top center of the image manager.
 
   ![Upload an image](img/upload_an_image.png)
 
@@ -103,17 +104,13 @@ TODO:
 
 ***ATTENTION:*** The uploader can only process PNG and JPEG files. Other files will be uploaded, but you cannot use them.
 
----
+### Delete an image
 
-<!---
+- To delete a specific image, click the "Delete image" button below the image. The image will then be deleted permanently.
 
-## Delete an image
-
-TODO
+  ![Delete an image](img/delete_an_image.png)
 
 ---
-
---->
 
 ## License
 
