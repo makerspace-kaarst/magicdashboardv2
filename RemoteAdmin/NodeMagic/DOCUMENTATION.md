@@ -5,10 +5,10 @@
 **Topics**
 
 - [Get started](#get-started)
-- [Add a node and add slices](#add-a-node-and-add-slices)
-- [Edit a slice with the "Node Templating Editor"](#edit-a-slice-with-the-node-templating-editor)
-- [Remove a node or a slice](#remove-a-node-or-a-slice)
-- [Changing the duration of the slices](#changing-the-duration-of-the-slices)
+- [Add a node and add slides](#add-a-node-and-add-slides)
+- [Edit a slide with the "Node Templating Editor"](#edit-a-slide-with-the-node-templating-editor)
+- [Remove a node or a slide](#remove-a-node-or-a-slide)
+- [Changing the duration of the slides](#changing-the-duration-of-the-slides)
 - [Open images (Upload, View and Delete)](#open-images-upload-view-and-delete)
 - [License](#license)
 
@@ -29,31 +29,31 @@
 
 ---
 
-## Add a node and add slices
+## Add a node and add slides
 
 - To create a node with the NodeMagic editor, click the "Add a node" button at the bottom left.
 
   ![Add a node](img/add_a_node.png)
 
-- After creating the node you can create different slices with the green "+" button and [then you can edit them with the "Node Templating Editor"](#edit-a-slice-with-the-node-templating-editor).
+- After creating the node you can create different slides with the green "+" button and [then you can edit them with the "Node Templating Editor"](#edit-a-slide-with-the-node-templating-editor).
 
-  ![Add a slice](img/add_a_slice.png)
+  ![Add a slide](img/add_a_slide.png)
 
 ---
 
-## Edit a slice with the "Node Templating Editor"
+## Edit a slide with the "Node Templating Editor"
 
-- After creating a slice, you can open it by clicking on the created slice.
+- After creating a slide, you can open it by clicking on the created slide.
 
-  ![Click on a slice](img/click_on_a_slice.png)
+  ![Click on a slide](img/click_on_a_slide.png)
 
-- Then you can click on the "Open node templating editor" button to open the HTML generator for the slice.
+- Then you can click on the "Open node templating editor" button to open the HTML generator for the slide.
 
   ![Open node templating editor](img/open_node_templating_editor.png)
 
 - There are then different selection options, which can then be changed according to the desired operation.
 
-  ![Click on a slice](img/click_on_a_slice.png)
+  ![Click on a slide](img/select_different_options.png)
 
 - When you have selected and filled out the desired option, you can click on "Save" above and then confirm the generated HTML text again with "Save".
 
@@ -63,7 +63,7 @@
 
 ---
 
-## Remove a node or a slice
+## Remove a node or a slide
 
 ### Remove a node
 
@@ -71,20 +71,20 @@
 
   ![Delete a node](img/delete_a_node.png)
 
-### Remove a slice
+### Remove a slide
 
-- If you want to remove a slice, press the "-" button under the desired slice.
+- If you want to remove a slide, press the "-" button under the desired slide.
 
-  ![Delete a slice](img/delete_a_slice.png)
+  ![Delete a slide](img/delete_a_slide.png)
 
 ---
 
-## Changing the duration of the slices
+## Changing the duration of the slides
 
-- The editing of the duration between slices changes can be set using the text field in the upper-center area.
+- The editing of the duration between slides changes can be set using the text field in the upper-center area.
 - There you can set in seconds how long the time between the changes is.
 
-  ![Changing the duration of the slices](img/changing_the_duration_of_the_slices.png)
+  ![Changing the duration of the slides](img/changing_the_duration_of_the_slides.png)
 
 ---
 
@@ -92,7 +92,7 @@
 
 - First open our image manager by clicking the "Open images" button in the main menu.
 
-  ![Open images](img/open_images.png)
+  ![Open images](img/manage_uploads.png)
 
 ### Upload an image
 
@@ -100,7 +100,7 @@
 
   ![Upload an image](img/upload_an_image.png)
 
-- After uploading the image, you can insert the image into a slice using the "Node Templating Editor". To do this, you need a headline and the file name of the image (for example: "img001.png").
+- After uploading the image, you can insert the image into a slide using the "Node Templating Editor". To do this, you need a headline and the file name of the image (for example: "img001.png").
 
 ***ATTENTION:*** The uploader can only process PNG and JPEG files. Other files will be uploaded, but you cannot use them.
 
@@ -119,4 +119,4 @@
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2020 © <a href="http://makerspace.jh220.de" target="_blank">Makerspace Kaarst</a>.
 
-> Also see: [LICENSE file](/LICENSE)
+> See also: [LICENSE file](/LICENSE)
