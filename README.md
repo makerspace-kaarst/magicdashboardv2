@@ -56,4 +56,4 @@ Reach ous out at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2020 © <a href="http://makerspace.jh220.de" target="_blank">Makerspace Kaarst</a>.
 
-> Also see: [LICENSE file](/LICENSE)
+> See also: [LICENSE file](/LICENSE)
