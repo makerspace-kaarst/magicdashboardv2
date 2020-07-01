@@ -132,11 +132,14 @@
         </div>
     </div>
 </div>
-<div class="absolute force-fill hidden" style='background-color:rgba(221, 221, 221, 0.44)' id='imagelist-main'>
+<div class="absolute force-fill hidden" style='background-color:rgba(221, 221, 221, 0.44)' id='image-list-main'>
   <div class="flex-fill">
-    <h1>Image List</h1>
-    <div class="grid grid4x" id='image-list-main'>
-      
+    <div class="flex" style="margin:2rem;">
+      <h1 class="mono rem3" style="color:#fff;padding:0;margin:0">Images in /uploads</h1>
+      <button type="button" name="button" class="flexend minusbutton" onclick="closeImageList()">Close</button>
+    </div>
+    <div class="grid grid4x" style="grid-gap:0.5rem;padding:0.5rem" id='image-list-content'>
+
     </div>
   </div>
 </div>

@@ -2,6 +2,7 @@ import cache
 import json
 import urllib
 from os import remove as _os_remove_file
+from os import walk as _walk
 
 
 ### --- SETTING POSTS ---
@@ -165,3 +166,6 @@ def http_upload(*args):
             return '<script>alert("Authentication eror")</script>'
     except ValueError:
         return '<script>alert("Generic error")</script>'
+
+def list_files(*args):
+    return str(list(_walk('../Frontend/uploads'))[0][2]).replace('\'','"')
