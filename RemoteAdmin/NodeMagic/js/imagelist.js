@@ -9,16 +9,16 @@ var html_template = `<div class="image-node-container hidden-flex">
 </div>`
 
 function openImageList() {
-  document.getElementById('imagelist-main')
+  document.getElementById('image-list-main')
     .classList.remove('hidden');
 
-    APIRequest('/list_files',{},makeFileList);
-    document.getElementById('imagelist-main')
+    document.getElementById('image-list-main')
         .classList.remove('hidden');
+  APIRequest('/list_files',{},makeFileList);
 }
 
 function closeImageList() {
-    document.getElementById('imagelist-main')
+    document.getElementById('image-list-main')
         .classList.add('hidden');
 }
 
@@ -28,7 +28,7 @@ function makeFileList(files) {
   for (var i = 0; i < files.length; i++) {
     out += html_template.split('[filename]').join(files[i])
   }
-  document.getElementById('image-list-main').innerHTML = out;
+  document.getElementById('image-list-content').innerHTML = out;
 }
 
 
