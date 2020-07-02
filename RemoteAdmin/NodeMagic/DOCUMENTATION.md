@@ -88,6 +88,16 @@
 
 ---
 
+## Changing the rows and columns of the nodes
+
+- To edit the rows and columns of the nodes, you can change the number to the right of the title.
+
+  ![Changing the rows and columns](img/changing_the_rows_and_columns.png)
+
+- Note that with too many rows and columns you have to scroll. Of course this is not possible on the MagicMirror.
+
+---
+
 ## Open images (Upload, View and Delete)
 
 - First open our image manager by clicking the "Open images" button in the main menu.
