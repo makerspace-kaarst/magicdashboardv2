@@ -19,3 +19,8 @@ function login() {
     loadGridSize();
     updateContext();
 }
+
+
+function resetUUID() {
+  APIRequest('/set_uuid',{'auth':''},sinkhole);
+}
