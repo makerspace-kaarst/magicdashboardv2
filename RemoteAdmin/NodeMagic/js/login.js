@@ -16,5 +16,6 @@ function login() {
     document.getElementById('form-password')
         .value = PASSWORD;
     // Bootup update
+    loadGridSize();
     updateContext();
 }

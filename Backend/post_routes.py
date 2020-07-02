@@ -124,14 +124,6 @@ def update_title(*args):
     return 'OK'
 
 
-# Danger zone Endpoints
-def update_password(*args):
-    temp = cache.read(['config'])
-    temp['password'] = args[0]['password']
-    cache.write(['config'], temp)
-    return 'OK'
-
-
 def windowtitle(*args):
     return cache.read(['title'])
 

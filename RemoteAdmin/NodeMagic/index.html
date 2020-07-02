@@ -23,6 +23,7 @@
     <script src="js/login.js" charset="utf-8"></script>
     <script src="js/htmlgen.js" charset="utf-8"></script>
     <script src="js/imagelist.js" charset="utf-8"></script>
+    <script src="js/gridsizer.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -43,9 +44,9 @@
             style='white-space: nowrap;'>Title</h1>
           <div class="flex mono" style="margin:.5rem;margin-left:auto;font-size:2rem">
             <h3>rows:</h3>
-            <input type="number" name="" value="" style="width:4rem;margin-right:2rem;color:#000;font-size:1.5rem">
+            <input type="number" name="" value="" style="width:4rem;margin-right:2rem;color:#000;font-size:1.5rem" id='grid-size-rows' onblur="updateGridSize()">
             <h3>columns:</h3>
-            <input type="number" name="" value="" style="width:4rem;margin-right:2rem;color:#000;font-size:1.5rem">
+            <input type="number" name="" value="" style="width:4rem;margin-right:2rem;color:#000;font-size:1.5rem" id='grid-size-columns' onblur="updateGridSize()">
           </div>
     </div>
     <div class="sidebar">

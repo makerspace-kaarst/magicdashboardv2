@@ -17,6 +17,24 @@ function APIRequest(url, data, callback, callback_data) {
     request.send(JSON.stringify(data));
 }
 
+function APIRequestGET(url, data, callback, callback_data) {
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState == 4) {
+            if (request.status === 200) {
+                if (callback) {
+                    callback(request.responseText, callback_data)
+                }
+            }
+        }
+    }
+    request.open("GET", '' + SERVER + ':' + PORT + url, true);
+    request.setRequestHeader("X-API-Auth", PASSWORD);
+    request.setRequestHeader("Accept", "text/plain");
+    data['auth'] = PASSWORD;
+    request.send(JSON.stringify(data));
+}
+
 function rawAPIRequest(url, data, callback, callback_data) {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {

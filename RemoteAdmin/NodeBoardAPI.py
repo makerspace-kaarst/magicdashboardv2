@@ -110,14 +110,6 @@ def update_title(title):
     }).text
 
 
-def update_password(password):
-    global PASSWORD
-    PASSWORD = password
-    return requests.post(IP + ':' + str(PORT) + '/update_password', headers={'X-API-Auth': PASSWORD}, data={
-        'password': password
-    }).text
-
-
 def master_key_password_reset(master_key, password):
     global PASSWORD
     PASSWORD = password

@@ -55,7 +55,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
                 data = {}
                 if len(self.path.split('?')) > 1:  # if there are GET parameters:
                     data = dictify(self.path.split('?')[1:])  # convert GETs to dict
-                if not cache.read(['config', 'secure-gets']) or cache.read(['auth_uuid']) == data['auth'] or ('auth' in data.keys() and data['auth'] in [cache.read(['config'])['password'], cache.read(['config'])['master_key']]):
+                if not cache.read(['config', 'secure-gets']) or ('auth' in data.keys() and cache.read(['auth_uuid']) == data['auth']) or ('X-API-Auth' in self.headers.keys() and self.headers['X-API-Auth'] in [cache.read(['config'])['password'], cache.read(['config'])['master_key']]):
                     out = function(data)
                     out = bytes(str(out), 'utf-16')  # convert string to returnable format
             else:
