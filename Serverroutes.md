@@ -28,7 +28,6 @@ These routes act as API endpoints, only returning OK or a traceback on error.
 - **/windowtitle** same as the GET version, returns the windowtitle
 - **/set_uuid** takes a `auth` parameter with eather a UUID of the target or a blank string, blank means anyone can connect
 - **/update_title** changes the current page title to `title`
-- **/update_password** uses the `password` argument to updates the API password to the new one.
 - **/get_delay** returns update delay of `node` in seconds
 - **/list_files** returns all files in upload directory
 

@@ -17,7 +17,6 @@ set_delay|`node_id` `delay`| how many seconds a node should display it's content
 dump_db| |returns json representation of the current server state
 overwrite_uuid|`uuid`|takes a uuid and replaces the currently authenticated one. leaving it blank allows anyone to connect.
 update_title|`title`|change the board title
-update_password|`password`|update the API password. Updates the global PASSWORD variable.
 master_key_password_reset|`master_key` `password`|update the API password using the secret `master_key` defined in the server config. Updates the global PASSWORD variable.
 
 # Setup
