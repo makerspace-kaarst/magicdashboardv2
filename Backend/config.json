@@ -1,6 +1,0 @@
-{
-  "secure-api": true,
-  "password": "ChangeMe",
-  "secure-gets": true,
-  "master_key": "HardcodedPasswordsAreVeryCashMoneyForAnyAttacker"
-}
