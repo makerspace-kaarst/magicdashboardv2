@@ -1,0 +1,24 @@
+@keyframes one-way-fade-animation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade {
+    animation-name: one-way-fade-animation;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+}
+
+.reverse-animation {
+    animation-direction: reverse;
+}

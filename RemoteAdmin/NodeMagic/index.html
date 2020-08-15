@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>NodeMagic</title>
+
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/containers.css">
+    <link rel="stylesheet" href="css/presets.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/htmlgen.css">
+    <link rel="stylesheet" href="css/image_list.css">
+
+    <script charset="utf-8">
+        SERVER = '';
+        PORT = -1;
+        PASSWORD = '';
+
+    </script>
+    <script src="js/api.js" charset="utf-8"></script>
+    <script src="js/context.js" charset="utf-8"></script>
+    <script src="js/login.js" charset="utf-8"></script>
+    <script src="js/htmlgen.js" charset="utf-8"></script>
+    <script src="js/imagelist.js" charset="utf-8"></script>
+    <script src="js/gridsizer.js" charset="utf-8"></script>
+</head>
+
+<body>
+<div class="force-fill flex loginbg absolute" id="login-main">
+    <div class="login hidden-flex">
+        <h1 class="center mono" style="color:#ffffff;font-size:3rem;">NodeBoard Login</h1>
+        <div class="login-inputs">
+            <input type="text" name="" value="localhost" placeholder="Board IP" id="login-ip">
+            <input type="number" name="" value="1337" placeholder="Server Port" id="login-port">
+            <input type="password" name="" value="ChangeMe" placeholder="API Key" id="login-key">
+            <button type="button" name="button" class="plusbutton" style="padding:1rem" onclick="login()">Login</button>
+        </div>
+    </div>
+</div>
+<div class="app absolute" style="display:none" id="app-main">
+    <div class="topbar" style="display:flex;justify-content:flex-start;align-items:center">
+        <h1 class="mono editable leftalign" contenteditable="true" onblur="update_title(this.innerText)" id="page-title"
+            style='white-space: nowrap;'>Title</h1>
+            <button type="button" name="button" class="minusbutton flexend mono" style='margin-right:0.4rem;margin-bottom:0.4rem;font-size:2rem;' onclick="resetUUID()">Reset registered UUID</button>
+          <div class="flex mono" style="margin:.5rem;margin-left:auto;font-size:2rem">
+            <h3>rows:</h3>
+            <input type="number" name="" value="" style="width:4rem;margin-right:2rem;color:#000;font-size:1.5rem" id='grid-size-rows' onblur="updateGridSize()">
+            <h3>columns:</h3>
+            <input type="number" name="" value="" style="width:4rem;margin-right:2rem;color:#000;font-size:1.5rem" id='grid-size-columns' onblur="updateGridSize()">
+          </div>
+    </div>
+    <div class="sidebar">
+        <div class="" id="sidebar-content">
+
+        </div>
+        <div class="flexend" style="margin:0;margin-top:auto">
+            <div class="node flex darkgrey">
+                <h1 class="mono smallcaps">Add a node</h1>
+                <button type="button" name="button" class="plusbutton" onclick="add_node()">+</button>
+            </div>
+            <div class="node flex darkgrey">
+                <h1 class="mono smallcaps">Manage uploads</h1>
+                <button type="button" name="button" class="plusbutton" onclick="openImageList()">+</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="content">
+        <div class="hidden-flex force-fill hidden" id='node-hub'>
+            <div class="topbar" style='background-color:inherit;'>
+                <h1 class='mono leftalign' id='node-hub-node-id'>node_id: 0</h1>
+                <h1 class='mono leftalign' id='node-hub-slides'>slides: 0</h1>
+                <h1 class="mono nodeval link" style="background-color: #b56262;" id='delete-node'>Delete Node</h1>
+                <input type="number" name="" value="5" style="min-height:40px;min-width:8rem;font-size:1.5rem;color:#000;margin-left:5rem;"
+                       onblur="save_slide_time()" id="slide-timer">
+            </div>
+            <div class="grid grid4x" id="node-hub-grid">
+            </div>
+        </div>
+
+        <div class="hidden-flex force-fill hidden" id="slide">
+            <div class="node darkgrey" id="slide-type">
+            </div>
+            <div class="node darkgrey" id="slide-text">
+                <div class="force-fill">
+                    <div class="flex">
+                        <h1 style="padding-right:1rem;">Node content: <span style='color:#8ecc93'><b>Raw HTML dump:</b></span>
+                        </h1>
+                        <button type="button" name="button" class="plusbutton" onclick="save_slide_data()">Save</button>
+                    </div>
+                    <div class="flex">
+                        <button type="button" name="button" class="plusbutton" onclick="openTemplatingEditor()">Open
+                            node templating editor
+                        </button>
+                    </div>
+                    <h1 class="leftalign mono border1" contenteditable="true" spellcheck="false"
+                        id='node-content-raw'></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="absolute force-fill hidden" style='background-color:rgba(221, 221, 221, 0.44)' id='templating-main'>
+    <div class="htmlgen absolute hidden-flex">
+        <div class="flex" style="justify-content:flex-start;background-color:#555" id='templating-presets'>
+            <div class="htmltype htmltype-selected link" onclick="selectPresetType(0)">Text</div>
+            <div class="htmltype link" onclick="selectPresetType(1)">Image</div>
+            <div class="htmltype link" onclick="selectPresetType(2)">Keyword</div>
+            <div class="htmltype plusbutton link flexend" onclick="htmlEditorSave()">Save</div>
+        </div>
+
+        <div class="flex-fill" id='html-editor-values'>
+            <div class="">
+                <h1 class="mono editable2 center rem5 template-headline" contenteditable="true">Headline</h1>
+                <h3 class="mono editable2 center rem3 spacing-top template-content" contenteditable="true">Content</h3>
+            </div>
+
+            <div class="hidden">
+                <h1 class="mono editable2 rem5 template-headline" contenteditable="true">Headline</h1>
+                <div class="flex-row">
+                    <h3 class="mono descriptiontext center rem3 spacing-top">Image name:</h3>
+                    <h3 class="mono editable2 center rem3 spacing-top template-content" contenteditable="true">
+                        Content</h3>
+                </div>
+            </div>
+            <div class="hidden">
+                <h1 class="mono editable2 center rem5 template-headline" contenteditable="true">Content</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="absolute force-fill hidden" style='background-color:rgba(0,0,0, 0.8)' id='image-list-main'>
+  <div class="flex-fill">
+    <div class="flex" style="margin:2rem;align-items:flex-end">
+      <h1 class="mono rem3" style="color:#fff;padding:0;margin:0">Images in /uploads</h1>
+
+      <div class="hidden-flex flexend" style="background-color: #222; height:100%; padding: 0.3rem;text-align:center;color:#fff">
+          <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+          <form id="uploadbanner" enctype="multipart/form-data" method="post"
+                action="http://localhost:1337/http_upload" target="dummyframe">
+              <input id="fileupload" name="myfile" type="file"/>
+              <input type="hidden" name='password' id="form-password" value=""/>
+              <input type="submit" value="submit" id="submit"/>
+          </form>
+      </div>
+
+      <button type="button" name="button" class="flexend minusbutton" onclick="closeImageList()">Close</button>
+    </div>
+    <div class="grid grid4x" style="grid-gap:0.5rem;padding:0.5rem" id='image-list-content'>
+
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
